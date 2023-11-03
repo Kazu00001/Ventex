@@ -34,7 +34,7 @@ if ($Result = $Conexion->prepare('SELECT id, pato, email, img FROM /* nombre de 
     // parámetros de enlace de la cadena s
 
     //s=string i=intenger 
-    $Result->bind_param('s', $_POST['correo']);
+    $Result->bind_param('s', $_POST['contra']);
     $Result->execute();
 } else {
     // Si la preparación de la consulta falla, muestra el error
@@ -50,7 +50,7 @@ if ($Result->num_rows > 0) {
 
     // se confirma que la cuenta existe ahora validamos la contraseña
 
-    if (password_verify($_POST['password'], $hash_password)) {
+    if (password_verify($_POST['contra'], $hash_password)) {
 
         // la conexion sería exitosa, se crea la sesión
         
