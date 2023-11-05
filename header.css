@@ -1,0 +1,80 @@
+header{
+    width: 100%;
+    height: 25%;
+    float: left;
+    background-color: #434F41;
+}
+#titfo{
+    width: 100%;
+    height: 75%;
+    float: left;
+    background-color: #434F41;
+}
+#titC{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+#tit{
+    margin-left: 10%;
+    margin-top: 1%;
+    font-size: 70px;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;;
+}
+#bnav{
+    width: 100%;
+    height: 25%;
+    float: left;
+    background-color: #78855F;
+}
+.nave{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.nave ul{
+    list-style: none;
+}
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+nav li{
+    font-size: 20px;
+    display:inline-block;
+    width:10%;
+    padding:15px 15px;
+    text-align:center;
+    color:whitesmoke;
+    font-weight: bold;
+    }
+    nav li:hover{
+        background-color:#434F41;
+        color:whitesmoke;
+        }
+#search{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+#sear{
+    width: 90%;
+    height: 30%;
+}
+#perfil{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+#pic{
+    width: 30%;
+    height: 65%;
+    margin: auto;
+    margin-top: 9%;
+    border-radius: 100px;
+    background-color: #dddddd;
+}
