@@ -40,7 +40,21 @@ header{
     position: relative;
     display: inline-block;
 }
-nav li{
+.menu2{
+    list-style: none;
+    text-transform:uppercase;
+    display: block;
+    padding: 10px 15px;
+    float: left;
+    position: absolute;
+}
+.menu2:hover{
+    background-color: #78855F;
+}
+.nave li:hover > ul{
+    display: block;
+}
+.nave li{
     font-size: 20px;
     display:inline-block;
     width:10%;
@@ -49,7 +63,7 @@ nav li{
     color:whitesmoke;
     font-weight: bold;
     }
-    nav li:hover{
+    .nave li:hover{
         background-color:#434F41;
         color:whitesmoke;
         }

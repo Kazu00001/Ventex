@@ -111,7 +111,7 @@ img{
 }
 .square_s{
     text-align: center;
-    width: 23%;
+    width: 17%;
     height: 50%;
     float: left;
     border-radius: 5px;
@@ -120,21 +120,24 @@ img{
 }
 .c_icon{
     width: 100%;
-    height: 80%;
+    height: 70%;
     float: left;
+    background-color: aqua;
 }
 .icons{
-    width: 75%;
-    height: 90%;
-    margin-top:10%;
+    width: 100%;
+    height: 100%;
+    background-color: #B58463;
 }
 .titSer{
-    margin-top: 9%;
+    margin-top: 6%;
     width: 100%;
     height: 20%;
     float: left;
 }
 .titS{ 
+    margin-left: 3%;
+    text-align: left;
     font-size:large;
     font-family: 'Hammersmith One', sans-serif;}
 .tit{
@@ -230,6 +233,9 @@ img{
 }
 .habitacion2:hover{
     transform: scale(1.1);
+}
+a{
+    text-decoration:none;
 }
 footer{
     width: 100%;

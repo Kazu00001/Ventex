@@ -11,7 +11,7 @@
             <article id="titfo">
                 <section id="titC">
                     <br>
-                    <h1 id="tit">Ventex</h1>
+                    <a href="inicio.php"><h1 id="tit">Ventex</h1></a>
                 </section>
                 <section id="search">
                     <br><br><br>
@@ -25,7 +25,13 @@
                 <nav class="nave">
                     <ul class="menu">
                         <li>Inicio</li>
-                        <li>Categorías</li>
+                        <li>Categorías
+                            <ul class="menu2">
+                                <li>Alimentos</li>
+                                <li>Accesorios</li>
+                                <li>Otros</li>
+                            </ul>
+                        </li>
                         <li>Quienes somos</li>
                     </ul>
 
@@ -66,7 +72,8 @@
                             <img src="icons/taza-de-cafe.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Cafeteria</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -74,7 +81,8 @@
                             <img src="icons/cena.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Restaurante</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -82,7 +90,8 @@
                             <img src="icons/wifi.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Wifi</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -90,7 +99,8 @@
                             <img src="icons/mascotas-permitidas.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Cuidado de Mascotas</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -98,7 +108,8 @@
                             <img src="icons/television.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Television a Cable</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -106,7 +117,8 @@
                             <img src="icons/spa.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Spa</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                 </section>
