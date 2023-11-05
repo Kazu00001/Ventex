@@ -85,6 +85,7 @@ a{
     list-style: none;
     width: 10%;
     background-color: #434F41;
+    z-index: 1000;
 }
 .menu li:hover .menuv{
     display: block;
