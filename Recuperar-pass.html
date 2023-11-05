@@ -15,22 +15,24 @@
         <h1>Ventex</h1>
     </header>
     
-    <h2 id="ins">Iniciar Sesión</h2>
+    <h2 id="ins">Cambiar contraseña</h2>
     <main>
         <aside id="for">
             <br><br>
-            <form action="Incios-auten.php" method="post">
+            <form action="cambio-pass.php" method="post">
                 <label for="correo" class="label">Correo Electronico</label>
-                <input type="email" name="correo" class="tam" placeholder="Introducce tu dirección de correo Electronico">
-                <label for="contra" class="label">Contraseña:</label>
-                <input type="password" name="contra" class="tam" placeholder="Ingresa tu Contraseña">
-                <a href="Recuperar-pass.html">¿Olvidaste tu contraseña?</a>
-                <br><br>
-                <input type="submit" value="Iniciar Sesión" class="boten">
+                <input type="email" name="correonew" class="tam" placeholder="Introducce tu dirección de correo Electronico" required>
+                <label for="contra" class="label">Nueva contraseña:</label>
+                <input type="password" name="contra" class="tam" placeholder="Ingresa tu Contraseña"required>
+                <a href=""></a>
+                <input type="submit" value="Cambiar contraseña" class="boten">
             </form>
             <p id="not">¿No tienes cuenta?</p>
             <form action="Registro.html">
                 <input type="submit" value="Registrarse" class="boten">
+            </form>
+            <form action="Incios.html">
+                <input type="submit" value="Iniciar Sesión" class="boten">
             </form>
         </aside>
     </main>
