@@ -3,42 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <Title>Inicio</Title>
-        <link rel="stylesheet" href="inicio.css">
         <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="inicio.css">
+        
     </head>
     <body>
-        <header>
-            <article id="titfo">
-                <section id="titC">
-                    <br>
-                    <a href="inicio.php"><h1 id="tit">Ventex</h1></a>
-                </section>
-                <section id="search">
-                    <br><br><br>
-                    <input type="search" id="sear">
-                </section>
-                <section id="perfil">
-                    <div id="pic"></div>
-                </section>
-            </article>
-            <section id="bnav">
-                <nav class="nave">
-                    <ul class="menu">
-                        <li>Inicio</li>
-                        <li>Categorías
-                            <ul class="menu2">
-                                <li>Alimentos</li>
-                                <li>Accesorios</li>
-                                <li>Otros</li>
-                            </ul>
-                        </li>
-                        <li>Quienes somos</li>
-                    </ul>
-
-                </nav>
+    <header>
+        <article id="titfo">
+            <section id="titC">
+                <br>
+                <a href="inicio.php"><h1 id="tit">Ventex</h1></a>
             </section>
-            
-        </header>
+            <section id="search">
+                <br><br><br>
+                <input type="search" id="sear">
+            </section>
+            <section id="perfil">
+                <div id="pic"></div>
+            </section>
+        </article>
+        <section id="bnav">
+            <nav class="nave">
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Categorías</a>
+                        <ul class="menuv">
+                            <li><a href="#">Alimentos</a></li>
+                            <li><a href="#">Accesorios</a></li>
+                            <li><a href="#">Otros</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Quienes somos</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+    </header>
 
         <div class="publicidad"><!-- Esta sección es para colocar una imagen de publicidad-->
             <div class= "carruseles">
