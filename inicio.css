@@ -27,8 +27,8 @@ html, body{
 .slider-carrusel{
     width: calc(100% / 4);
 }
-.slider-carrusel img{
-    background-color: aqua;
+.slider-carrusel img
+{
     width: 100%;
     position: center;
     object-fit: cover;
@@ -73,7 +73,7 @@ img{
     
 }
 .tits{
-    font-size: xx-large;
+    font-size: 300%;
     font-family: 'Hammersmith One', sans-serif;
     color: rgb(99, 99, 99);
     margin-left: 12%;
@@ -98,6 +98,7 @@ img{
     width: 97%;
     height: 54%;
     float: left;
+    margin-left: 2%;
     margin-top: .3;
     margin: 1%;
     background-color: rgb(187, 187, 187);
@@ -110,8 +111,8 @@ img{
 }
 .square_s{
     text-align: center;
-    width: 14.6%;
-    height: 40%;
+    width: 23%;
+    height: 50%;
     float: left;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
@@ -119,24 +120,23 @@ img{
 }
 .c_icon{
     width: 100%;
-    height: 70%;
+    height: 80%;
     float: left;
 }
 .icons{
-    width: 60%;
-    height:60%;
-    margin-top:20%;
+    width: 75%;
+    height: 90%;
+    margin-top:10%;
 }
 .titSer{
+    margin-top: 9%;
     width: 100%;
-    height: 30%;
+    height: 20%;
     float: left;
 }
-.titS{
+.titS{ 
     font-size:large;
-    font-family: 'Hammersmith One', sans-serif;
-
-}
+    font-family: 'Hammersmith One', sans-serif;}
 .tit{
     font-size: x-large;
     color: rgb(102, 102, 102);
@@ -154,21 +154,30 @@ img{
 
 }
 .imagen2{
-    width: 100%;
+    width: 96%;
     height: 50%;
     float: left;
+    margin-left: 2%;
     background-color: #B58463;
     background-position: center bottom 35% ;
     background-repeat: no-repeat;
     background-size:cover;
-    background-image: url(https://images.pexels.com/photos/236606/pexels-photo-236606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://i0.wp.com/candymania.mx/blog/wp-content/uploads/2017/03/bulk-confectionery-lollies-candy-e1489429399452.jpg?fit=800%2C450&ssl=1);
 
+}
+.dul{
+    margin-top: 5%;
+    font-size: 600%;
+    font-family: 'Hammersmith One', sans-serif;
+    color: whitesmoke;
+    margin-left: 12%;
+    text-shadow: 3px 3px 4px black;;
 }
 .servicios{
     width: 100%;
     height: 80%;
     float: left;
-    background-color: #e6e6e6;
+    background-color: #CCCCCC;
     margin-top: 3%;
     margin-bottom: 3%;
 }
@@ -226,5 +235,5 @@ footer{
     width: 100%;
     height: 30%;
     float: left;
-    background-color: rgb(102, 88, 51);
+    background-color: #434F41;
 }

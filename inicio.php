@@ -45,7 +45,7 @@
         <main>
             <article id="paquetes"><!--Toda esta parte contendrá los diferentes tipos de habitaciones-->
                 <br>
-                <h1 class="tits">Planes de Habitaciones</h1>
+                <h1 class="tits">Productos recomendados</h1>
                 <section id="container-rooms">
                 <section class="habitacion"><section id="uno"></section></section>
                     <section class="habitacion"><section id="dos"></section></section>
@@ -54,12 +54,12 @@
                 </section>
             </article><!-------------------------------------------------------------------------------->
 
-            <aside class="imagen"></aside> <!--Imagen de publicidad-->
+
 
 
             <article class="servicios"> <!--Esta parte contendrá una vista rapid de los serviios que ofrece el hotel-->
                 <br><br> 
-                <h1 class="titc">Servicios</h1>
+                <h1 class="tits">Productos Vistos Recientemente</h1>
                 <section id="container-rooms">
                     <section class="square_s">
                         <div class="c_icon">
@@ -109,54 +109,14 @@
                             <p class="titS">Spa</p>
                         </div>
                     </section>
-                    <section class="square_s">
-                        <div class="c_icon">
-                            <img src="icons/gimnasio.png" class="icons">
-                        </div>
-                        <div class="titSer">
-                            <p class="titS">Gimnasio</p>
-                        </div>
-                    </section>
-                    <section class="square_s">
-                        <div class="c_icon">
-                            <img src="icons/hombre-nadando.png" class="icons">
-                        </div>
-                        <div class="titSer">
-                            <p class="titS">Piscina</p>
-                        </div>
-                    </section>
-                    <section class="square_s">
-                        <div class="c_icon">
-                            <img src="icons/veterinario.png" class="icons">
-                        </div>
-                        <div class="titSer">
-                            <p class="titS">Veterinaria</p>
-                        </div>
-                    </section>
-                    <section class="square_s">
-                        <div class="c_icon">
-                            <img src="icons/tijeras-abiertas-forma-de-herramienta.png" class="icons">
-                        </div>
-                        <div class="titSer">
-                            <p class="titS">Estetica Canina</p>
-                        </div>
-                    </section>
-                    <section class="square_s">
-                        <div class="c_icon">
-                            <img src="icons/tazon-de-agua.png" class="icons">
-                        </div>
-                        <div class="titSer">
-                            <p class="titS">Bebederos</p>
-                        </div>
-                    </section>
                 </section>
             </article><!-------------------------------------------------------------------------------->
 
-            <aside class="imagen2"></aside><!--imagen de publicidad-->
+            <aside class="imagen2"><h1 class="dul">Gran Variedad <br>de Dulces</h1></aside><!--imagen de publicidad-->
 
             <article class="servicios"> <!--Esta parte contendrá una vista rapida de las actividades existentes en el hotel-->
                 <br><br> 
-                <h1 class="titc">Actividades</h1>
+                <h1 class="tits">Productos Populares</h1>
                 <p></p>
                 <section id="container-rooms">
                     <section class="square_s">
@@ -207,8 +167,6 @@
                             <p class="titS">Sala de juegos</p>
                         </div>
                     </section>
-                    <br><br>
-                    <button id="but">Reserva Ahora</button>
                 </section>
             </article><!------------------------------------------------------------------------------->
 
