@@ -1,0 +1,189 @@
+*{
+    margin: 0%;
+}
+html, body{
+    height: 100%;
+    background-color: #CCCCCC;
+}
+header{
+    width: 100%;
+    height: 25%;
+    float: left;
+    background-color: #434F41;
+}
+#titfo{
+    width: 100%;
+    height: 75%;
+    float: left;
+    background-color: #434F41;
+}
+#titC{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+#tit{
+    margin-left: 10%;
+    margin-top: 1%;
+    font-size: 70px;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;;
+}
+#bnav{
+    width: 100%;
+    height: 25%;
+    float: left;
+    background-color: #78855F;
+}
+#search{
+    width: 40%;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+#sear{
+    width: 90%;
+    height: 30%;
+}
+#perfil{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+#pic{
+    width: 30%;
+    height: 65%;
+    margin: auto;
+    margin-top: 9%;
+    border-radius: 100px;
+    background-color: #dddddd;
+}
+
+/*------------------------------------------------------------------------------------------*/
+main{
+    width: 100%;
+    height: 200%;
+    float: left;
+}
+#container{
+
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 5%;
+    background-color: #ffffff;
+}
+#container_left{
+    width: 60%;
+    height: 96%;
+    float: left;
+    margin: 2%;
+}
+#container_pictures{
+    width: 100%;
+    height: 48%;
+    float: left;
+}
+#container_p{
+    width: 80%;
+    height: 100%;
+    float: right;
+    background-color: #F2F2F2;
+}
+#container_info{
+    width: 32%;
+    height: 60%;
+    float: left;
+    margin: 2%;
+    background-color: #F2F2F2;
+    border: 3px;
+    border-radius: 5px;
+    border-color: #D8D1D1;
+}
+#more_products{
+    width: 100%;
+    height: 50%;
+    float: left;
+    margin-top: 3%;
+}
+.mp{
+    width: 31%;
+    height: 60%;
+    float: right;
+    margin: 1%;
+    background-color: #F2F2F2;
+}
+.picture{
+    width: 100%;
+    height: 55%;
+    float: left;
+    margin-bottom: 4%;
+    background-color: #cecece;
+}
+.inf{
+    width: 92%;
+    height: 37%;
+    float: left;
+    margin-left: 4%;
+}
+.prec{
+    font-family: 'Farro', sans-serif;
+    color: #7E7E7E;
+    font-size: xx-large;
+    margin-left: 10%;
+}
+.nombreP{
+    font-family: 'Cabina', sans-serif;
+    font-size: large;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+#contact_information{
+    width: 32%;
+    height: 34%;
+    float: left;
+    margin-left: 2%;
+    background-color: #F2F2F2;
+    border: 3px;
+    border-radius: 5px;
+    border-color: #D8D1D1;
+}
+#precio{
+    font-family: 'Farro', sans-serif;
+    color: #7E7E7E;
+    font-size: xx-large;
+    margin-left: 10%;
+}
+#namP{
+    font-family: 'Cabina', sans-serif;
+    font-size: xx-large;
+    margin-left: 10%;
+}
+#verd{
+    font-family: 'Cabina', sans-serif;
+    margin-left: 10%;
+    color: #4CBD24;
+}
+.desc{
+    font-family: 'Cabina', sans-serif;
+    margin: 10%;
+}
+#bot{
+    width: 80%;
+    height: 35px;
+    border-radius: 10px;
+    border: 0ch;
+    color: white;
+    font-family: 'Cabina', sans-serif;
+    margin-left:10%;
+    background-color: #78855F;
+}
+#mas{
+    font-family: 'Cabina', sans-serif;
+    font-size: small;
+    text-align: center;
+    color: #7E7E7E;
+}
+

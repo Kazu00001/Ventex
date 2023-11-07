@@ -1,0 +1,63 @@
+
+header{
+    width: 100vw;
+    height: 25vh;
+    float: left;
+    background-color: #434F41;
+}
+#titfo{
+    width: 100vw;
+    height: 75%;
+    float: left;
+    background-color: #434F41;
+}
+#titC{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+#tit{
+    margin-left: 10%;
+    margin-top: 1%;
+    font-size: 70px;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;
+}
+#bnav{
+    width: 100%;
+    height: 25%;
+    float: left;
+    background-color: #78855F;
+}
+#search{
+    width: 40%;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+#sear{
+    width: 90%;
+    height: 30%;
+}
+#perfil{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+#pic{
+    width: 30%;
+    height: 65%;
+    margin: auto;
+    margin-top: 9%;
+    border-radius: 100px;
+    background-color: #dddddd;
+}
+footer{
+    width: 100vw;
+    height: 20vh;
+    float: left;
+    margin-top: 3vh;
+    background-color: #434F41;
+}
