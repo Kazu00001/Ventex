@@ -74,6 +74,7 @@ a{
     padding: auto;
     color: white;
     text-decoration: none;
+    font-size: 30px;
 }
 .menu > li:hover{
     background-color: #434F41;
