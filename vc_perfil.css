@@ -1,0 +1,108 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: #CCCCCC;
+}
+main{
+    width: 100vw;
+    height: auto;
+    background-color: aqua;
+}
+/* Barra del Perfíl (izquierda)-----------------------------------------------------------------------------------------*/
+#bar_perfil{
+    width: 25vw;
+    height: 125vh;
+    float: left;
+    margin: 3vh;
+    background-color: white;
+    border-radius: 5px;
+}
+#c_pic{
+    width: 25vw;
+    height: 50vh;
+    float: left;
+}
+#pict{
+    width: 14vw;
+    height: 14vw;
+    margin: auto;
+    margin-top: 9%;
+    border-radius: 100%;
+    background-color: #c9c9c9;
+}
+#nomUsuario{
+    font-size: xx-large;
+    font-family: 'Hammersmith One', sans-serif;
+    margin: 1vh;
+    margin-top: 4vh;
+    text-align: center;
+}
+/*---------------------------------------------------------------------------------------------------------------------*/
+#titulo_C{
+    width: 69vw;
+    height: 15vh;
+    float: left;
+    margin-top: 10vh;
+    text-align: center;
+}
+#tir{
+    color: white;
+    font-size: 8vh;
+    font-family: 'Hammersmith One', sans-serif;
+}
+#pr_productos{
+    width: 64vw;
+    height: auto;
+    float: left;
+    margin-top: 3vh;
+    margin-left: 5vh;
+}
+.container_p{
+    width: 20vw;
+    height: 35vw;
+    float: left;
+    margin: 1vh;
+    background-color: white;
+    border-radius: 5px;
+}
+.container_p:hover{
+    box-shadow: 0px 0px 10px 5px rgb(170, 170, 170);
+}
+.c_picture:hover{
+    box-shadow: 0px 0px 10px 1px rgb(170, 170, 170);
+}
+.container_p .c_picture{
+    width: 20vw;
+    height: 20vw;
+    float: left;
+    border-bottom: #CCCCCC;
+}
+.c_precio{
+    width: 20vw;
+    height: 5vw;
+    float: left;
+    margin-top: 1vw;
+}
+.precio{
+    color: rgb(126, 126, 126);
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: xx-large;
+    margin: 1vw;
+    margin-left: 2vw;
+}
+.c_nombre{
+    width: 18vw;
+    height: 8vw;
+    float: left;
+}
+.nombre{
+    font-size: larger;
+    font-family: 'Hammersmith One', sans-serif;
+    margin-left: 2vw;
+}
+ .imagen{
+    width: 100%;
+    height: auto;
+}
