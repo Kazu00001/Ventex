@@ -25,7 +25,7 @@
         <section id="bnav">
             <nav class="nave">
                 <ul class="menu">
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="#">Categorías</a>
                         <ul class="menuv">
                             <li><a href="#">Alimentos</a></li>
@@ -33,7 +33,7 @@
                             <li><a href="#">Otros</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Quienes somos</a></li>
+                    <li><a href="#">Perfil</a></li>
                 </ul>
             </nav>
         </section>
