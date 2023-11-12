@@ -14,23 +14,33 @@
     <header>
         <h1>Ventex</h1>
     </header>
+    <section id="title2">
+        <br>
+        <br>
+        
+    </section>
     
-    <h2 id="ins">Iniciar Sesión</h2>
-    <main>
-        <aside id="for">
+<br>
+    <main id="main3">
+        <aside id="for2">
             <br><br>
-            <form action="Incios-auten.php" method="post">
-                <label for="correo" class="label">Correo Electronico</label>
-                <input type="email" name="correo" class="tam" placeholder="Introducce tu dirección de correo Electronico">
-                <label for="contra" class="label">Contraseña:</label>
-                <input type="password" name="contra" class="tam" placeholder="Ingresa tu Contraseña">
+            <h2 class="title">Iniciar Sesión</h2>
+            <form action="Incios-auten.php" class="form" method="post">
+                <label>
+                    <input class="input" type="email" name="correo" placeholder="" required="">
+                    <span>Email</span>
+                </label>
+                <label>
+                    <input class="input" type="password" name="contra" placeholder="" required="">
+                    <span>Password</span>
+                </label>
                 <a href="Recuperar-pass.html">¿Olvidaste tu contraseña?</a>
-                <br><br>
-                <input type="submit" value="Iniciar Sesión" class="boten">
+                
+                <input type="submit" value="Iniciar Sesión" class="submit">
             </form>
             <p id="not">¿No tienes cuenta?</p>
-            <form action="Registro.html">
-                <input type="submit" value="Registrarse" class="boten">
+            <form action="Registro.html" >
+                <input type="submit" value="Registrarse" action="Registro.html" class="submit">
             </form>
         </aside>
     </main>
