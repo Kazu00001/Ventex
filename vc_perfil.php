@@ -1,9 +1,24 @@
 <?php
-    $us='Edgar Humberto Huizar';
+    $us = 'Edgar Humberto Huizar';
     require_once('conexion.php');
     $ex=mysqli_query($conexion, "SELECT * FROM productos;");
     $exU=mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$us'");
     $most=mysqli_fetch_array($exU);
+
+    $exU = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$us'");
+
+    // Verifica si la consulta fue exitosa
+    if ($exU) {
+        // Verifica si hay al menos una fila de resultados
+        if (mysqli_num_rows($exU) > 0) {
+            // Obtiene los resultados
+            $most = mysqli_fetch_array($exU);
+        } else {
+            echo "No se encontraron resultados para el usuario '$us'.";
+        }
+    } else {
+        echo "Error en la consulta: " . mysqli_error($conexion);
+    }
 ?>
 <!DOCTYPE html>
 <html>

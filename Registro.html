@@ -14,26 +14,41 @@
         <h1>Ventex</h1>
     </header>
     
-    <h2 id="ins">Registro</h2>
+    <section id="title">
+        <br><br>
+        
+    </section>
+    
     <main id="main2">
         <aside id="for2">
             <br><br>
-            <form action="Registro.php" method="post">
-                <label for="nombre" class="label">Nombre Completo:</label>
-                    <input type="text" name="nombre" class="tam">
-                    <label for="correo" class="label">Correo Electronico:</label>
-                    <input type="email" name="correo" class="tam"><br><br>
-                    <label for="fecha" class="label">Fecha de nacimiento:</label>
-                    <input type="date" name="fecha" class="tam"><br><br>
-                    <label for="telefono" class="label">Teléfono:</label>
-                    <input type="number" name="telefono" class="tam">
-                    <label for="pass" class="label">Contraseña:</label>
-                    <input type="password" name="pass" class="tam">
-                    <input type="submit" value="Registrarse"  class="boten">
-            </form>
-            <p id="not">¿Ya tienes cuenta?</p>
-            <form action="Incios.html">
-                <input type="submit" value="Iniciar Sesión" class="boten">
+            <form action="Registro.php" method="post" class="form">
+                <h2 class="title" >Registro</h2>
+                    <div class="flex">
+                    <label>
+                        <input class="input" type="text" name="nombre" placeholder="" required="">
+                        <span>Firstname</span>
+                    </label>
+                </div>  
+                <label>
+                    <input class="input" type="email" name="correo" placeholder="" required="">
+                    <span>Email</span>
+                </label>
+                    <label>
+                        
+                        <input class="input" type="date" name="fecha" placeholder="" required="">
+                        <span>Fecha de nacimiento</span>
+                    </label>
+                    <label>
+                        <input class="input" type="number" name="telefono" placeholder="" required="">
+                        <span>Teléfono</span>
+                    </label>
+                    <label>
+                        <input class="input" type="password" name="pass" placeholder="" required="">
+                        <span>Password</span>
+                    </label>
+                    <input type="submit" value="Registrarse"  class="submit">
+                    <p class="signin">OHH Ya tienes cuenta ? <a href="Incios.html">Login in</a> </p>
             </form>
         </aside>
     </main>

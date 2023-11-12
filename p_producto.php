@@ -83,6 +83,8 @@
                 <p class="desc"><?php echo $prod['descripcion']?></p>
                 <p id="mas">¿Quieres ver mas productos de este vendedor?</p><br><br>
                 <form action="vc_perfil.php" method="post">
+                <form action="vc_perfil.php">
+                    <input type="hidden"  name="vendedor" value="<?php echo $prod['vendedor'];?>">
                     <input type="submit" id="bot" value="Ver perfil del vendedor">
                 </form>
             </section>
