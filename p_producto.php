@@ -64,7 +64,7 @@
                 <p class="desc"><b>Horario de Estancia: <br></b> 7:00am - 2:00pm</p>
                 <p class="desc">Aquí va una descripción mamalona del producto, pero como esto nomás es un ejemplo pues voy a escribir pura mamada para que se vea lleno este espacio<br><br>ATTE: Kim Kardashan 👄💋</p>
                 <p id="mas">¿Quieres ver mas productos de este vendedor?</p><br><br>
-                <form action="p_producto.html">
+                <form action="vc_perfil.php">
                     <input type="submit" id="bot" value="Ver perfil del vendedor">
                 </form>
             </section>
