@@ -75,16 +75,12 @@
 <!-------------------------------------------------------------------------------------------------------->
     <main>
         <article id="bar_perfil">
-            <section id="c_pic">
-                <div id="pict">
-                    <img src="imgs/<?php echo $most['productImage']?>" class="imagen">
-                </div>
-                <p id="nomUsuario"><?php echo $most['seller']?></p>
-            </section>
-                <p class="description"><?php echo $most['description']?></p>
+            
         </article>
         <section id="titulo_C">
-            <p id="tir">Productos del Vendedor</p>
+        <?php while ($cat=mysqli_fetch_array($cats)) {?>
+            <p id="tir"><?php echo $cat['category'];?></p>
+            <?php } ?>
         </section>
         <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->
