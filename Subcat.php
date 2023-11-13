@@ -1,9 +1,19 @@
 <?php
     $us = 'Usuario 1';
     require_once('conexion.php');
-    $ex=mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
+    $cats=mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
     $exU=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$us'");
 
+    $mywher = isset($_GET['category']) ? $_GET['category'] : null;
+    $busc = null;
+
+    if ($mywher != null) {
+        $busc = "SELECT * FROM products WHERE category = '$mywher'";
+    } else {
+        $busc = "SELECT * FROM products";
+    }
+
+    $ex = mysqli_query($conexion, $busc);
     // Verifica si la consulta fue exitosa
     if ($exU) {
         // Verifica si hay al menos una fila de resultados
@@ -47,10 +57,10 @@
                     <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="#">Categorías</a>
                         <ul class="menuv">
-                            <?php while ($ex=mysqli_fetch_array($cats)) {?>
+                            <?php while ($cat=mysqli_fetch_array($cats)) {?>
                                 <li class="ca">
-                                    <a href="Subcat.php?category=<?php echo $ex['category'];?>" 
-                                    name=""><?php echo $ex['category'];?></a>
+                                    <a href="Subcat.php?category=<?php echo $cat['category'];?>" 
+                                    name=""><?php echo $cat['category'];?></a>
                                 </li>
                                 <?php } ?>
                         </ul>
@@ -64,13 +74,7 @@
 <!-------------------------------------------------------------------------------------------------------->
     <main>
         <article id="bar_perfil">
-            <section id="c_pic">
-                <div id="pict">
-                    <img src="imgs/<?php echo $most['productImage']?>" class="imagen">
-                </div>
-                <p id="nomUsuario"><?php echo $most['seller']?></p>
-            </section>
-                <p class="description"><?php echo $most['description']?></p>
+            
         </article>
         <section id="titulo_C">
             <p id="tir">Productos del Vendedor</p>
