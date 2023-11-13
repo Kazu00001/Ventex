@@ -1,12 +1,9 @@
 *{
-    box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: #fc7d1c;
+    background-color: #1e1f1e;
 }
 body.loggedin {
 	background-color: #1e1f1e;
@@ -22,20 +19,30 @@ body.loggedin {
 	color: #4a536e;
 }
 #content2{
+    width: 60%;
+    height: 50%;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-    
+    float: left;
 	background-color: #a29e9e;
 }
+#content3{
+    width: 40%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    float: left;
+	background-color: #a29e9e;
+}
+#content3>h1{
+font-size: 200%;
+}
+
 #content2 > img{
-    max-width: 20%;
+    max-width: 40%;
     border-radius: 100px;
-    margin: auto;
     text-align: center;
     margin-left: 350px;
-}
-#content2 > table{
     margin: auto;
 }
+
 
 .content > p table td, .content > div table td {
 	padding: 8px;
@@ -52,9 +59,8 @@ body.loggedin {
 .imgs{
     max-width: 20%;
     border-radius: 100px;
-    margin: auto;
     text-align: center;
-    margin-left: 350px;
+    margin-right: 350%;
 }
 .titlesp{
     font-size: 200%;
@@ -67,4 +73,25 @@ body.loggedin {
 width: 100%;
 height: 1%;
 float: left;
+}
+.iconos{
+    max-width: 20%;
+    border-radius: 100px;
+    text-align: center;
+    float: left;
+   
+}
+.iconos2{
+    max-width: 25%;
+    border-radius: 100px;
+    text-align: center;
+    float: left;
+   margin: auto;
+}
+#iconos-juntos{
+    width: auto;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    margin-left: 18%;
 }

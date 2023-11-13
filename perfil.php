@@ -1,5 +1,7 @@
 <?php
 
+use LDAP\Result;
+
 session_start();
 /*
 
@@ -25,7 +27,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 
 <body class="loggedin">
-<header>
+    <header>
         <article id="titfo">
             <section id="titC">
                 <br>
@@ -56,10 +58,10 @@ if (!isset($_SESSION['loggedin'])) {
                 </ul>
             </nav>
         </section>
-        
     </header>
+    
     <div id="espacio"><br><br><br></div>
-    <div class="content">
+    <section class="content">
         
         <div id="content2">
             <h2>Información del Usuario</h2>
@@ -91,11 +93,54 @@ if (!isset($_SESSION['loggedin'])) {
                     </td>
                 </tr>
             </table>
+            
         </div>
+        <section id="content3"> 
+    <?php
+    $hostname = 'localhost';
+    $username = 'root';
+    $password = '';
+    $database = 'ventex';
+    
+    // conexión a la base de datos
+    $idt = $_SESSION['name'];
+    $Conexion = mysqli_connect($hostname, $username, $password, $database);
+
+    if (!$Conexion) {
+        die("Error en la conexión: " . mysqli_connect_error());
+    }
+
+    $sql = "SELECT * FROM sellerprofile WHERE nameSeller = '$idt'";
+    $envio = mysqli_query($Conexion, $sql);
+
+    if (!$envio) {
+        die('Error en la consulta: ' . mysqli_error($Conexion));
+    }
+
+    while ($mostar = mysqli_fetch_array($envio)) {
+        ?>
+        <h1>Información de Contacto</h1>
+        <section id="iconos-juntos">
+            <section><a href="<?php echo $mostar['instagram']; ?>"><img src="imgs/instagram.png" class="iconos"></a></section>
+            <section><a href="<?php echo $mostar['x']; ?>"><img src="imgs/twitter.png" class="iconos2"></a></section>
+            <section><a href="<?php echo $mostar['whatsapp']; ?>"><img src="imgs/whatsapp.png" class="iconos"></a></section>
+        </section>
+        <br><br><br><br><br>
+        <?php
+        echo '<p>' . $mostar['profileDescription'] . '</p>';
+    }
+
+    // Cerrar la conexión a la base de datos
+    mysqli_close($Conexion);
+    ?>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaaaaaaaa
+</section>
+
         <hr>
+        <br>
         <h1 class="titlesp">Estos son tus Productos</h1>
-        <br><br><br><br> 
-    </div>
+    </section>
 </body>
 
 </html>
