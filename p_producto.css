@@ -162,7 +162,7 @@ main{
 }
 #contact_information{
     width: 32%;
-    height: 34%;
+    height: auto;
     float: left;
     margin-left: 2%;
     background-color: #F2F2F2;
@@ -176,10 +176,11 @@ main{
     font-size: xx-large;
     margin-left: 10%;
 }
-#namP{
+.namP{
     font-family: 'Cabina', sans-serif;
     font-size: xx-large;
     margin-left: 10%;
+    margin-bottom: 2vw;
 }
 #verd{
     font-family: 'Cabina', sans-serif;
@@ -200,10 +201,38 @@ main{
     margin-left:10%;
     margin-bottom: 2vw;
     background-color: #78855F;
+    transition: .3s;
 }
 #mas{
     font-family: 'Cabina', sans-serif;
     font-size: small;
     text-align: center;
     color: #7E7E7E;
+}
+.container_links{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.link{
+    width: 5vw;
+    height: 5vw;
+    float: left;
+    margin-left: 10%;
+    background-color: #a5a5a5;
+    border-radius: 100%;
+    margin-bottom: 1vw;
+    transition: .3s;
+}
+.link:hover{
+    box-shadow: 0 0 5px 2px rgb(177, 177, 177);
+}
+#bot:hover{
+    box-shadow: 0 0 5px 2px rgb(177, 177, 177);
+}
+.contact_description{
+    font-family: 'Cabina', sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2vw;
 }

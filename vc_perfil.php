@@ -1,16 +1,13 @@
 <?php
-    $us = 'Edgar Humberto Huizar';
+    $us = 'Usuario 1';
     require_once('conexion.php');
-    $ex=mysqli_query($conexion, "SELECT * FROM productos;");
-    $exU=mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$us'");
-    $most=mysqli_fetch_array($exU);
-
-    $exU = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$us'");
+    $ex=mysqli_query($conexion, "SELECT * FROM products;");
+    $exU=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$us'");
 
     // Verifica si la consulta fue exitosa
     if ($exU) {
         // Verifica si hay al menos una fila de resultados
-        if (mysqli_num_rows($exU) > 0) {
+        if (mysqli_num_rows($exU) > 0) { 
             // Obtiene los resultados
             $most = mysqli_fetch_array($exU);
         } else {
@@ -53,7 +50,7 @@
                 <div id="pict">
                     <img src="imgs/<?php echo $most['picture']?>" class="imagen">
                 </div>
-                <p id="nomUsuario"><?php echo $most['usuario']?></p>
+                <p id="nomUsuario"><?php echo $most['nameSeller']?></p>
             </section>
         </article>
         <section id="titulo_C">
@@ -65,17 +62,17 @@
                 
             <form action="p_producto.php" method="post" id="form1">
                 <button  class="container_p" onclick="enviarFormulario()">
-                    <input type="hidden"  name="id" value="<?php echo $mostrar['nombre'];?>">
+                    <input type="hidden"  name="id" value="<?php echo $mostrar['id'];?>">
                     <section> <!--Esto contiene la informacion de un producto-->
                         <div class="c_picture">
-<!--Imagen del Producto----><img src="imgs/<?php echo $mostrar['imagen']?>" class="imagen">
+<!--Imagen del Producto----><img src="imgs/<?php echo $mostrar['productImage']?>" class="imagen">
                         </div>
                         <div class="c_info">
                             <div class="c_precio">
-<!--Precio del Producto----><h1 class="precio">$<?php echo $mostrar['precio']?></h1>
+<!--Precio del Producto----><h1 class="precio">$<?php echo $mostrar['price']?></h1>
                             </div>
                             <div class="c_nombre">
-<!--Nombre del Producto----><p class="nombre"><?php echo $mostrar['nombre']?></p>
+<!--Nombre del Producto----><p class="nombre"><?php echo $mostrar['nameProduct']?></p>
                             </div>
                         </div>
                         </section>
