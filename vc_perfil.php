@@ -52,6 +52,14 @@
                 </div>
                 <p id="nomUsuario"><?php echo $most['nameSeller']?></p>
             </section>
+                <p class="description"><?php echo $most['profileDescription']?></p>
+            <section id="container_contact">
+                <p class="namP">Información de Contacto</p>
+                <div class="container_links">
+                    <a href="<?php echo $most['instagram']?>"><div class="link"></div></a>
+                </div>
+                <p class="contact_description"><?php echo $most['Contactdescription']?></p>
+            </section>
         </article>
         <section id="titulo_C">
             <p id="tir">Productos del Vendedor</p>

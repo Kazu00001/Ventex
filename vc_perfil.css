@@ -1,6 +1,7 @@
 *{
     padding: 0%;
     margin: 0%;
+    font-family: 'Hammersmith One', sans-serif;
 }
 body{
     background-color: #CCCCCC;
@@ -12,7 +13,7 @@ main{
 /* Barra del Perfíl (izquierda)-----------------------------------------------------------------------------------------*/
 #bar_perfil{
     width: 25vw;
-    height: 125vh;
+    height: auto;
     float: left;
     margin: 3vh;
     background-color: white;
@@ -37,6 +38,48 @@ main{
     margin: 1vh;
     margin-top: 4vh;
     text-align: center;
+}
+.description{
+    margin: 2vw;
+}
+#container_contact{
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 5px;
+    margin-bottom: 2vw;
+}
+.namP{
+    font-family: 'Cabina', sans-serif;
+    font-size: xx-large;
+    margin-left: 10%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.container_links{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.link{
+    width: 5vw;
+    height: 5vw;
+    float: left;
+    margin-left: 10%;
+    background-color: #a5a5a5;
+    border-radius: 100%;
+    margin-bottom: 1vw;
+    transition: .3s;
+}
+.link:hover{
+    box-shadow: 0 0 5px 2px rgb(177, 177, 177);
+}
+.contact_description{
+    font-family: 'Cabina', sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2vw;
 }
 /*---------------------------------------------------------------------------------------------------------------------*/
 #titulo_C{
