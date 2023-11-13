@@ -54,7 +54,7 @@ main{
 }
 #paquetes{
     width: 100%;
-    height: 80%;
+    height: 50%;
     margin: auto;
     margin-top: 1%;
     float: left;
@@ -87,32 +87,17 @@ img{
 .habitacion{
     text-align: center;
     width: 31%;
-    height: 46%;
+    height: 70%;
     float: left;
     background-color: rgb(187, 187, 187);
     margin: 1%;
     margin-bottom: 0.5%;
     box-shadow: 0 5px 12px black;
 }
-.habitacion2{
-    width: 97%;
-    height: 54%;
-    float: left;
-    margin-left: 2%;
-    margin-top: .3;
-    margin: 1%;
-    background-color: rgb(187, 187, 187);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom 20%;
-    box-shadow: 0 5px 12px black;
-    background-image: url(https://www.moonpalacecancun.com/mpn_Room_Superior_Deluxe_Ocean_View_hero_3600x1800px_170bd779d2.jpg);
-
-}
 .square_s{
     text-align: center;
     width: 17%;
-    height: 50%;
+    height: 80%;
     float: left;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
@@ -178,10 +163,9 @@ img{
 }
 .servicios{
     width: 100%;
-    height: 80%;
+    height: 50%;
     float: left;
     background-color: #CCCCCC;
-    margin-top: 3%;
     margin-bottom: 3%;
 }
 #but{

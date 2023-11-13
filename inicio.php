@@ -56,7 +56,6 @@
                 <section class="habitacion"><section id="uno"></section></section>
                     <section class="habitacion"><section id="dos"></section></section>
                     <section class="habitacion"><section id="tres"></section></section>
-                    <section class="habitacion2"></section>
                 </section>
             </article><!-------------------------------------------------------------------------------->
 
@@ -112,15 +111,6 @@
                             <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
-                    <section class="square_s">
-                        <div class="c_icon">
-                            <img src="icons/spa.png" class="icons">
-                        </div>
-                        <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
-                        </div>
-                    </section>
                 </section>
             </article><!-------------------------------------------------------------------------------->
 
@@ -136,7 +126,8 @@
                             <img src="icons/paseo-perro.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Paseo al Aire Libre</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -144,7 +135,8 @@
                             <img src="icons/competencia-de-perros.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Juegos con tu Mascota</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -152,7 +144,8 @@
                             <img src="icons/vino.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Prueba de vinos</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -160,7 +153,8 @@
                             <img src="icons/mapa.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Recorridos por la ciudad</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -168,15 +162,8 @@
                             <img src="icons/camara.png" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">Fotografias con tu Mascota</p>
-                        </div>
-                    </section>
-                    <section class="square_s">
-                        <div class="c_icon">
-                            <img src="icons/consola.png" class="icons">
-                        </div>
-                        <div class="titSer">
-                            <p class="titS">Sala de juegos</p>
+                            <p class="titS">$00.00</p>
+                            <p class="titS">Nombre del Producto</p>
                         </div>
                     </section>
                 </section>
