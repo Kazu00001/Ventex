@@ -1,9 +1,24 @@
 <?php
-    $us='Edgar Humberto Huizar';
+    $us = 'Edgar Humberto Huizar';
     require_once('conexion.php');
-    $ex=mysqli_query($conexion, "SELECT * FROM pruebav;");
+    $ex=mysqli_query($conexion, "SELECT * FROM productos;");
     $exU=mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$us'");
     $most=mysqli_fetch_array($exU);
+
+    $exU = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$us'");
+
+    // Verifica si la consulta fue exitosa
+    if ($exU) {
+        // Verifica si hay al menos una fila de resultados
+        if (mysqli_num_rows($exU) > 0) {
+            // Obtiene los resultados
+            $most = mysqli_fetch_array($exU);
+        } else {
+            echo "No se encontraron resultados para el usuario '$us'.";
+        }
+    } else {
+        echo "Error en la consulta: " . mysqli_error($conexion);
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,19 +62,32 @@
         <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->
             <?php while($mostrar=mysqli_fetch_array($ex)) { ?>
-            <section class="container_p"> <!--Esto contiene la informacion de un producto-->
-                <div class="c_picture">
-<!--Imagen del Producto--><img src="imgs/<?php echo $mostrar['imagen']?>" class="imagen">
-                </div>
-                <div class="c_info">
-                    <div class="c_precio">
-<!--Precio del Producto--><h1 class="precio">$<?php echo $mostrar['precio']?></h1>
-                    </div>
-                    <div class="c_nombre">
-<!--Nombre del Producto--><p class="nombre"><?php echo $mostrar['nombre']?></p>
-                    </div>
-                </div>
-            </section>
+                
+            <form action="p_producto.php" method="post" id="form1">
+                <button  class="container_p" onclick="enviarFormulario()">
+                    <input type="hidden"  name="id" value="<?php echo $mostrar['nombre'];?>">
+                    <section> <!--Esto contiene la informacion de un producto-->
+                        <div class="c_picture">
+<!--Imagen del Producto----><img src="imgs/<?php echo $mostrar['imagen']?>" class="imagen">
+                        </div>
+                        <div class="c_info">
+                            <div class="c_precio">
+<!--Precio del Producto----><h1 class="precio">$<?php echo $mostrar['precio']?></h1>
+                            </div>
+                            <div class="c_nombre">
+<!--Nombre del Producto----><p class="nombre"><?php echo $mostrar['nombre']?></p>
+                            </div>
+                        </div>
+                        </section>
+
+                    <script>
+                        function enviarFormulario() {
+                            document.getElementById('form1').submit();
+                        }
+                    </script>
+                </button>
+            </form>
+
             <?php }?>
 <!-------------------------------------------------------------------------------------------------------->
            

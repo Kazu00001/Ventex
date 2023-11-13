@@ -93,6 +93,7 @@ img{
     margin: 1%;
     margin-bottom: 0.5%;
     box-shadow: 0 5px 12px black;
+    transition: .5s;
 }
 .square_s{
     text-align: center;

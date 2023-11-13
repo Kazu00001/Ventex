@@ -15,19 +15,25 @@
         <h1>Ventex</h1>
     </header>
     
-    <h2 id="ins">Cambiar contraseña</h2>
-    <main>
-        <aside id="for">
-            <br><br>
-            <form action="cambio-pass.php" method="post">
-                <label for="correo" class="label">Correo Electronico</label>
-                <input type="email" name="correonew" class="tam" placeholder="Introducce tu dirección de correo Electronico" required>
-                <label for="contra" class="label">Nueva contraseña:</label>
-                <input type="password" name="contra" class="tam" placeholder="Ingresa tu Contraseña"required>
-                <a href=""></a>
-                <input type="submit" value="Cambiar contraseña" class="boten">
+    <section id="title2">
+        <br>
+        <br>
+    </section>
+    <main class="main3">
+        <aside id="for2">
+            <h2 class="title">Cambiar contraseña</h2>
+            <form action="cambio-pass.php" class="form" method="post">
+                <label>
+                    <input class="input" type="email" name="correonew" placeholder="" required="">
+                    <span>Email</span>
+                </label>
+                <label>
+                    <input class="input" type="password" name="contra" placeholder="" required="">
+                    <span>Nueva contraseña:</span>
+                </label>
+                <input type="submit" value="Cambiar contraseña" class="submit">
             </form>
-            <p id="not">¿No tienes cuenta?</p>
+            <p id="not" style="margin-right: 20%;">¿No tienes cuenta?</p>
             <form action="Registro.html">
                 <input type="submit" value="Registrarse" class="boten">
             </form>
