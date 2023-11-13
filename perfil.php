@@ -11,16 +11,11 @@ if (!isset($_SESSION['loggedin'])) {
 */
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Usuario</title>
     <link rel="stylesheet" href="styleperf.css">
@@ -41,7 +36,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <input type="search" id="sear">
             </section>
             <section id="perfil">
-                <div id="pic"></div>
+                <div id="pic">
+                <img style="border-radius: 100px;" src="<?php echo'imgs/'.$_SESSION['img']?>">  
+                </div>
             </section>
         </article>
         <section id="bnav">
@@ -61,16 +58,12 @@ if (!isset($_SESSION['loggedin'])) {
         </section>
         
     </header>
-    <nav class="navtop">
-        <h1 style="color:white;">Perfil</h1>
-        <a href="" style="color:white;">Inicio</a>
-        <a href="cerrar-sesion.php" style="color:white;"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a>
-    </nav>
+    <div id="espacio"><br><br><br></div>
     <div class="content">
-
-        <h2>Información del Usuario</h2>
-        <div>
-            <img class="imgs" src="<?php echo'img/'.$_SESSION['foto']?>" >
+        
+        <div id="content2">
+            <h2>Información del Usuario</h2>
+            <img class="imgs" src="<?php echo'imgs/'.$_SESSION['img']?>" >
             <br>
             <p>
                 La siguiente es la información registrada de tu cuenta
@@ -84,19 +77,25 @@ if (!isset($_SESSION['loggedin'])) {
                     <td>Email:</td>
                     <td><?= $_SESSION['email'] ?></td>
                 </tr>
+                <tr>
+                    <td>Fecha de nacimiento:</td>
+                    <td><?= $_SESSION['birthdate'] ?></td>
+                </tr>
+                <tr>
+                    <td>Telefono(solo se te va mostar ati):</td>
+                    <td><?= $_SESSION['phone'] ?></td>
+                </tr>
+                <tr>
+                    <td>
+                    <a href="cerrar-sesion.php" style="color:white;"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a>
+                    </td>
+                </tr>
             </table>
-
-
-
         </div>
-
-
+        <hr>
+        <h1 class="titlesp">Estos son tus Productos</h1>
+        <br><br><br><br> 
     </div>
-
-
-
-    </nav>
-
 </body>
 
 </html>

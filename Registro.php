@@ -4,7 +4,7 @@
 $hostname='localhost';
 $username='root';
 $password='';
-$database='pawtel';
+$database='ventex';
 
 // conexion a la base de datos
 
@@ -30,7 +30,7 @@ if (!isset($_POST['nombre'], $_POST['correo'],$_POST['fecha'],$_POST['telefono']
     header('Location: registropaw.html');// form_user.html redicionamiento del sito si hay un error
 }
 // hacer la sentencia de envio 
-$sql="INSERT INTO usser(nombres,correo,fech,telefono,cotra) value('$Nom','$correo','$fecha','$telefono','$hash')";
+$sql="INSERT INTO users(nameUser,email,birthdate,phone,pass) value('$Nom','$correo','$fecha','$telefono','$hash')";
 //mandar la sentancia de envio
 $envio= mysqli_query($Conexion,$sql);
 // si hay un problema con el envio le damos un mensaje de que no se pudo 
@@ -39,7 +39,7 @@ if(!$envio){
     echo ' Error de MySQL:'.mysqli_error($Conexion);
 } else {
     echo'Parece que todo va bien';
-    header('Location: Login.html');
+    header('Location: Incios.html');
 }
 // cerramos la conecxion de la base de datos 
 mysqli_close($Conexion);

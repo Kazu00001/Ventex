@@ -6,7 +6,7 @@ session_start();
 $hostname='localhost';
 $username='root';
 $password='';
-$database='';//nombre de la db
+$database='ventex';//nombre de la db
 
 // conexion a la base de datos
 
@@ -21,7 +21,7 @@ if (mysqli_connect_error()) {
 
 // Se valida si se ha enviado información, con la función isset()
 
-if (!isset($_POST['correo'], $_POST['password'])) {
+if (!isset($_POST['correo'], $_POST['contra'])) {
 
     // si no hay datos muestra error y re direccionar
 
@@ -30,12 +30,13 @@ if (!isset($_POST['correo'], $_POST['password'])) {
 
 // evitar inyección sql
 // pasar los parametros a recolectar 
-if ($Result = $Conexion->prepare('SELECT id, pato, email, img FROM /* nombre de table*/accounts WHERE email = ?')) {
+if ($Result = $Conexion->prepare('SELECT id,pass,nameUser, email, birthdate, phone, img FROM users WHERE email = ?')) {
     // parámetros de enlace de la cadena s
 
     //s=string i=intenger 
-    $Result->bind_param('s', $_POST['contra']);
+    $Result->bind_param('s', $_POST['correo']);
     $Result->execute();
+
 } else {
     // Si la preparación de la consulta falla, muestra el error
     die('Error en la preparación de la consulta: ' . mysqli_error($Conexion));
@@ -45,7 +46,7 @@ if ($Result = $Conexion->prepare('SELECT id, pato, email, img FROM /* nombre de 
 
 $Result->store_result();
 if ($Result->num_rows > 0) {
-    $Result->bind_result($id, $hash_password,$email,$imagen);
+    $Result->bind_result($id, $hash_password, $name, $email, $birthdate, $phone, $img);
     $Result->fetch();
 
     // se confirma que la cuenta existe ahora validamos la contraseña
@@ -56,22 +57,24 @@ if ($Result->num_rows > 0) {
         
         session_regenerate_id();
         $_SESSION['loggedin'] = TRUE;
-        $_SESSION['name'] = $_POST['correo'];
+        $_SESSION['name'] = $name;
+        $_SESSION['birthdate'] = $birthdate;
+        $_SESSION['phone'] = $phone;
         $_SESSION['id'] = $id;
         $_SESSION['email']= $email;
-        $_SESSION['foto']= $imagen;
+        $_SESSION['img']= $img;
         //dederir al incio
         header('Location: perfil.php');
     } else {
-        // contraseña incorrecta
-        echo '<SCRIPT> alert("Tu contraseña es incorecta")</SCRIPT>';
-        header('Location: Incios.html');
-        
+
+        header('<script>Tu contraseña es incorrecta</script>');
+        header('Location: Incios.php');
+        exit; // Asegurar que el script se detenga después de la redirección
     }
 } else {
     // usuario incorrecto
     header('Location: Incios.html');
-    echo '<SCRIPT> alert("Tu usuario es incorrecto") </SCRIPT>';
+    echo '<script>Tu usuario es incorrecto</script>';
 }
 
 //vaciar el stock
