@@ -1,3 +1,9 @@
+<?php
+    require_once('conexion.php');
+
+    $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
+
+?>
 <!doctype html>
 <html>
     <head>
@@ -28,9 +34,12 @@
                     <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="#">Categorías</a>
                         <ul class="menuv">
-                            <li><a href="#">Alimentos</a></li>
-                            <li><a href="#">Accesorios</a></li>
-                            <li><a href="#">Otros</a></li>
+                            <?php while ($cate=mysqli_fetch_array($cats)) {?>
+                                <li class="ca">
+                                    <a href="Subcat.php?category=<?php echo $cate['category'];?>" 
+                                    name=""><?php echo $cate['category'];?></a>
+                                </li>
+                                <?php } ?>
                         </ul>
                     </li>
                     <li><a href="#">Perfil</a></li>
