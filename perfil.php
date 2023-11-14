@@ -26,7 +26,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 
 <body class="loggedin">
-    <header>
+<header>
         <article id="titfo">
             <section id="titC">
                 <br>
@@ -37,9 +37,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <input type="search" id="sear">
             </section>
             <section id="perfil">
-                <div id="pic">
-                <img style="border-radius: 100px;" src="<?php echo'imgs/'.$_SESSION['img']?>">  
-                </div>
+                <div id="pic"></div>
             </section>
         </article>
         <section id="bnav">
@@ -48,15 +46,19 @@ if (!isset($_SESSION['loggedin'])) {
                     <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="#">Categorías</a>
                         <ul class="menuv">
-                            <li><a href="#">Alimentos</a></li>
-                            <li><a href="#">Accesorios</a></li>
-                            <li><a href="#">Otros</a></li>
+                            <?php while ($cat=mysqli_fetch_array($cats)) {?>
+                                <li class="ca">
+                                    <a href="Subcat.php?category=<?php echo $cat['category'];?>" 
+                                    name=""><?php echo $cat['category'];?></a>
+                                </li>
+                                <?php } ?>
                         </ul>
                     </li>
                     <li><a href="#">Perfil</a></li>
                 </ul>
             </nav>
         </section>
+        
     </header>
     
     <main>

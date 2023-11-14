@@ -73,7 +73,7 @@
     <article id="bar_perfil">
     </article>
     <section id="titulo_C">
-        <h1><?php echo $subpro ?></h1>
+        <h1 class="tituleishon"><?php echo $subpro ?></h1>
     </section>
     <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->

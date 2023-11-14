@@ -34,10 +34,10 @@
                     <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="#">Categorías</a>
                         <ul class="menuv">
-                            <?php while ($cate=mysqli_fetch_array($cats)) {?>
+                            <?php while ($cat=mysqli_fetch_array($cats)) {?>
                                 <li class="ca">
-                                    <a href="Subcat.php?category=<?php echo $cate['category'];?>" 
-                                    name=""><?php echo $cate['category'];?></a>
+                                    <a href="Subcat.php?category=<?php echo $cat['category'];?>" 
+                                    name=""><?php echo $cat['category'];?></a>
                                 </li>
                                 <?php } ?>
                         </ul>

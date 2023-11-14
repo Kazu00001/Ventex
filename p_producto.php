@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="p_producto.css">
 </head>
 <body>
-    <header>
+<header>
         <article id="titfo">
             <section id="titC">
                 <br>
-                <h1 id="tit">VENTEX</h1>
+                <a href="inicio.php"><h1 id="tit">Ventex</h1></a>
             </section>
             <section id="search">
                 <br><br><br>
@@ -30,7 +30,25 @@
                 <div id="pic"></div>
             </section>
         </article>
-        <section id="bnav"></section>
+        <section id="bnav">
+            <nav class="nave">
+                <ul class="menu">
+                    <li><a href="inicio.php">Inicio</a></li>
+                    <li><a href="#">Categorías</a>
+                        <ul class="menuv">
+                            <?php while ($cat=mysqli_fetch_array($cats)) {?>
+                                <li class="ca">
+                                    <a href="Subcat.php?category=<?php echo $cat['category'];?>" 
+                                    name=""><?php echo $cat['category'];?></a>
+                                </li>
+                                <?php } ?>
+                        </ul>
+                    </li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </section>
+        
     </header>
     <main>
         <article id="container">

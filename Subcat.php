@@ -93,7 +93,7 @@
             <?php } ?>
     </article>
     <section id="titulo_C">
-        <h1><?php echo $mywher ?></h1>
+        <h1 class="tituleishon"><?php echo $mywher ?></h1>
     </section>
     <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->
