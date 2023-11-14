@@ -84,7 +84,6 @@
                             </div>
                         </div>
                         </section>
-
                     <script>
                         function enviarFormulario() {
                             document.getElementById('form1').submit();
