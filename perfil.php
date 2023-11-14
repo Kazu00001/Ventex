@@ -14,14 +14,13 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Usuario</title>
     <link rel="stylesheet" href="styleperf.css">
-    <link rel="stylesheet" href="inicio.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -60,9 +59,9 @@ if (!isset($_SESSION['loggedin'])) {
         </section>
     </header>
     
-    <div id="espacio"><br><br><br></div>
-    <section class="content">
+    <main>
         
+    <section class="content">
         <div id="content2">
             <h2>Información del Usuario</h2>
             <img class="imgs" src="<?php echo'imgs/'.$_SESSION['img']?>" >
@@ -70,6 +69,7 @@ if (!isset($_SESSION['loggedin'])) {
             <p>
                 La siguiente es la información registrada de tu cuenta
             </p>
+            
             <table>
                 <tr>
                     <td>Usuario:</td>
@@ -93,7 +93,6 @@ if (!isset($_SESSION['loggedin'])) {
                     </td>
                 </tr>
             </table>
-            
         </div>
         <section id="content3"> 
     <?php
@@ -142,7 +141,11 @@ if (!isset($_SESSION['loggedin'])) {
         <hr>
         <br>
         <h1 class="titlesp">Estos son tus Productos</h1>
+        
+        
     </section>
+    
+    </main>
 </body>
 
 </html>

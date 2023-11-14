@@ -13,7 +13,7 @@
     } else {
         $busc = "SELECT * FROM products";
     }
-    $subc=mysqli_query($conexion, "SELECT subcategory FROM products WHERE category=$mywher;");
+    $subc=mysqli_query($conexion, "SELECT subcategory FROM products WHERE category='$mywher';");
     $ex = mysqli_query($conexion, $busc);
     // Verifica si la consulta fue exitosa
     if ($exU) {

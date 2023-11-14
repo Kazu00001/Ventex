@@ -5,21 +5,25 @@
     padding: 0%;
 }
 
-body, html {
+html, body {
     width: 100%;
-    height: 100%;
     background-color: #1e1f1e;
 }
 
-body.loggedin {
-    background-color: #1e1f1e;
-}
 
-.content {
+main{
     width: 100%;
-    min-width: 50%; /* Ajusta este valor según tus necesidades */
-    max-width: 80%; /* Ajusta este valor según tus necesidades */
-    margin: 0;
+    height: auto;
+    float: left;
+}
+.content{
+    width: 80vw;
+    height: auto;
+    float: left;
+    background-color: white;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 10vw;
 }
 
 .content h2 {
@@ -32,8 +36,6 @@ body.loggedin {
 #content2 {
     width: 60%;
     height: 100%;
-    min-width: 50%; /* Ajusta este valor según tus necesidades */
-    max-height: 80%; /* Ajusta este valor según tus necesidades */
     box-shadow: 0 0 5% 0 rgba(0, 0, 0, 0.1);
     float: left;
     background-color: #a29e9e;
@@ -90,9 +92,6 @@ body.loggedin {
     color: #ffffff;
 }
 
-.content {
-    margin: auto;
-}
 
 #espacio {
     width: 100%;

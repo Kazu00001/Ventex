@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height: 25%;
+    height: 25vh;
     float: left;
     background-color: #434F41;
 }
@@ -11,7 +11,7 @@ header{
     background-color: #434F41;
 }
 #titC{
-    width: 30%;
+    width: 40%;
     height: 100%;
     float: left;
 }
@@ -23,7 +23,7 @@ header{
     font-family: 'Hammersmith One', sans-serif;;
 }
 #search{
-    width: 50%;
+    width: 40%;
     height: 100%;
     float: left;
     text-align: center;
@@ -38,10 +38,11 @@ header{
     height: 100%;
     text-align: center;
     float: left;
+
 }
 #pic{
-    width: 30%;
-    height: 65%;
+    width: 6vw;
+    height: 6vw;
     margin: auto;
     margin-top: 9%;
     border-radius: 100px;
