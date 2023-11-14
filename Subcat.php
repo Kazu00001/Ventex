@@ -2,6 +2,7 @@
     $us = 'Usuario 1';
     require_once('conexion.php');
     $cats=mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
+    
     $exU=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$us'");
 
     $mywher = isset($_GET['category']) ? $_GET['category'] : null;
@@ -12,7 +13,7 @@
     } else {
         $busc = "SELECT * FROM products";
     }
-
+    $subc=mysqli_query($conexion, "SELECT subcategory FROM products WHERE category=$mywher;");
     $ex = mysqli_query($conexion, $busc);
     // Verifica si la consulta fue exitosa
     if ($exU) {
@@ -34,7 +35,7 @@
     <title>Ventex</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="categorias.css">
-    <link rel="stylesheet" href="vc_perfil.css">
+    <link rel="stylesheet" href="subcat.css">
 </head>
 <body>
 <!-------------------------------------------------------------------------------------------------------->
@@ -73,16 +74,21 @@
         
     </header>
 <!-------------------------------------------------------------------------------------------------------->
-    <main>
-        <article id="bar_perfil">
-            
-        </article>
-        <section id="titulo_C">
-        <?php while ($cat=mysqli_fetch_array($cats)) {?>
-            <p id="tir"><?php echo $cat['category'];?></p>
+<main>
+    <article id="bar_perfil">
+        <ul>
+            <?php while ($subcat=mysqli_fetch_array($subc)) {?>
+                <li class="ca">
+                    <a href="Subcat.php?category=<?php echo $subcat['subcategory'];?>" 
+                    name=""><?php echo $subcat['subcategory'];?></a>
+                </li>
             <?php } ?>
-        </section>
-        <article id="pr_productos">
+        </ul>
+    </article>
+    <section id="titulo_C">
+        <h1><?php echo $mywher ?></h1>
+    </section>
+    <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->
             <?php while($mostrar=mysqli_fetch_array($ex)) { ?>
                 
