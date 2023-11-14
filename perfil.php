@@ -128,13 +128,15 @@ if (!isset($_SESSION['loggedin'])) {
         <br><br><br><br><br>
         <?php
         echo '<p>' . $mostar['profileDescription'] . '</p>';
+        echo'<br><br';
+        echo '<p>' . $mostar['Contactdescription'] . '</p>';
     }
 
     // Cerrar la conexión a la base de datos
     mysqli_close($Conexion);
     ?>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaaaaaaaa
+<br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaaaaaaaa
 </section>
 
         <hr>
