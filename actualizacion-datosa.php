@@ -29,7 +29,7 @@ session_start();
             <form action="actualizacion-datos.php" method="post" class="form">
                 <h2 class="title" >Actualizacion de datos</h2>
                     <div class="flex">
-                        <input type="hidden" name="ideup"  value="<?php $_SESSION['id'] ?>">
+                        <input type="hidden" name="ideup"  value="<?php echo $_SESSION['id'] ?>">
                     <label>
                         <input class="input" type="text" name="nombre" placeholder="" required="">
                         <span>Nombre(s)</span>

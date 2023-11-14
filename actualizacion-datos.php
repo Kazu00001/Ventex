@@ -29,11 +29,11 @@ $fecha = $_POST['fecha'];
 $telefono = $_POST['telefono'];
 
 // Hacer la sentencia de actualización (UPDATE) con sentencia preparada
-$sql = "UPDATE users SET nameUser = ?, email = ?, birthdate = ?, phone = ? WHERE id = ?";
+$sql = "UPDATE users SET nameUser = ?, email = ?, birthdate = ?, phone = ? WHERE id = $idup";
 $stmt = mysqli_prepare($Conexion, $sql);
 
 // Vincular parámetros
-mysqli_stmt_bind_param($stmt, "ssssi", $Nom, $correo, $fecha, $telefono, $idup);
+mysqli_stmt_bind_param($stmt, "sssi", $Nom, $correo, $fecha, $telefono);
 
 // Ejecutar la sentencia de actualización
 $envio = mysqli_stmt_execute($stmt);
