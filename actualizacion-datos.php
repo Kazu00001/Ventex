@@ -44,10 +44,39 @@ if (!$envio) {
     echo '<SCRIPT> alert("Tu registro no se pudo actualizar")</SCRIPT>';
     echo 'Error de MySQL: ' . mysqli_error($Conexion);
 } else {
-    // Redireccionar si todo está bien
-    header('Location: Incios.html');
-}
+    // Redireccionar si todo está bien y cambiar nombre
+    
+    // Hacer la segunda sentencia de actualización (UPDATE) con sentencia preparada
+    $sql2 = "UPDATE sellerprofile SET nameSeller = ? WHERE idvendeor = $idup";
+    
+    
+    // Verificar la conexión antes de preparar la segunda sentencia
+    if ($Conexion) {
+        $stmt2 = mysqli_prepare($Conexion, $sql2);
 
-// Cerrar la conexión a la base de datos
-mysqli_close($Conexion);
-?>
+        // Verificar la preparación de la segunda sentencia
+        if ($stmt2) {
+            mysqli_stmt_bind_param($stmt2, "s", $Nom);
+            $envio2 = mysqli_stmt_execute($stmt2);
+
+            // Verificar si hubo errores en la consulta
+            if (!$envio2) {
+                // Mostrar un mensaje de error y detalles de MySQL
+                echo '<SCRIPT> alert("Error al actualizar el perfil del vendedor")</SCRIPT>';
+                echo 'Error de MySQL: ' . mysqli_error($Conexion);
+            } else {
+                header('Location: Incios.html');
+            }
+        } else {
+            // Mostrar un mensaje de error si la preparación falla
+            echo 'Error al preparar la segunda sentencia SQL';
+        }
+    } else {
+        // Mostrar un mensaje de error si la conexión no está establecida
+        echo 'Error en la conexión a la base de datos';
+        die;
+    }
+
+    // Cerrar la conexión a la base de datos
+    mysqli_close($Conexion);
+}
