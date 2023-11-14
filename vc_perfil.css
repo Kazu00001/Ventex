@@ -13,7 +13,7 @@ main{
 /* Barra del Perfíl (izquierda)-----------------------------------------------------------------------------------------*/
 #bar_perfil{
     width: 25vw;
-    height: auto;
+    height: 20%;
     float: left;
     margin: 3vh;
     background-color: white;
