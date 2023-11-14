@@ -1,19 +1,14 @@
 <?php
+    $subpro = $_POST['id'];
+    
     $us = 'Usuario 1';
     require_once('conexion.php');
     $cats=mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
     
+    
     $exU=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$us'");
 
-    $mywher = isset($_GET['category']) ? $_GET['category'] : null;
-    $busc = null;
-
-    if ($mywher != null) {
-        $busc = "SELECT * FROM products WHERE category = '$mywher'";
-    } else {
-        $busc = "SELECT * FROM products";
-    }
-    $subc=mysqli_query($conexion, "SELECT DISTINCT subcategory FROM products WHERE category='$mywher';");
+    $busc = "SELECT * FROM products WHERE subcategory = '$subpro'";
     $ex = mysqli_query($conexion, $busc);
     // Verifica si la consulta fue exitosa
     if ($exU) {
@@ -34,6 +29,7 @@
     <meta charset="UTF-8">
     <title>Ventex</title>
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="categorias.css">
     <link rel="stylesheet" href="subcat.css">
 </head>
 <body>
@@ -74,26 +70,10 @@
     </header>
 <!-------------------------------------------------------------------------------------------------------->
 <main>
-    <article class="bar_perfil">
-            <?php while ($subcat=mysqli_fetch_array($subc)) {?>
-                <form action="subsub.php" method="post" id="form1">
-                <button  class="subcate" onclick="enviarFormulario()">
-                    <input type="hidden"  name="id" value="<?php echo $subcat['subcategory'];?>">
-                        <section>
-                            <p><?php echo $subcat['subcategory'];?></p>
-                        </section>
-
-                    <script>
-                        function enviarFormulario() {
-                            document.getElementById('form1').submit();
-                        }
-                    </script>
-                </button>
-            </form>
-            <?php } ?>
+    <article id="bar_perfil">
     </article>
     <section id="titulo_C">
-        <h1><?php echo $mywher ?></h1>
+        <h1><?php echo $subpro ?></h1>
     </section>
     <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->
