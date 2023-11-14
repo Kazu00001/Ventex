@@ -121,3 +121,23 @@ main{
     text-align: center;
     margin-left: 18%;
 }
+.boten{
+    margin-bottom: 3%;
+    width: 70%;
+    height: 40px;
+    text-align: center;
+    background-color: #78855F;
+    border-color: #78855F;
+    color: white;
+    border-radius: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 5%;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #78855F;
+    text-align: center;
+}
+  .boten:hover {
+    background-color: #78855F;
+  }

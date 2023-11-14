@@ -37,7 +37,9 @@ if (!isset($_SESSION['loggedin'])) {
                 <input type="search" id="sear">
             </section>
             <section id="perfil">
-                <div id="pic"></div>
+                <div id="pic">
+                <img style="border-radius: 100px;" class="imgeesp" src="<?php echo'imgs/'.$_SESSION['img']?>">  
+                </div>
             </section>
         </article>
         <section id="bnav">
@@ -94,6 +96,14 @@ if (!isset($_SESSION['loggedin'])) {
                     <a href="cerrar-sesion.php" style="color:white;"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                         
+                        <form action="actualizacion-datosa.php" class="boten">
+                            <input type="submit" value="Editar">
+                        </form>
+                    </td>
+                </tr>
             </table>
         </div>
         <section id="content3"> 
@@ -137,14 +147,16 @@ if (!isset($_SESSION['loggedin'])) {
     mysqli_close($Conexion);
     ?>
 <br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaaaaaaaa
+<form action="actualizacion-datosa.php" class="boten">
+                            <input type="submit" value="Editar">
+                        </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaaaaaaaa
 </section>
 
         <hr>
         <br>
         <h1 class="titlesp">Estos son tus Productos</h1>
-        
-        
+       
     </section>
     
     </main>
