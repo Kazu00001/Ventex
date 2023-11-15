@@ -1,7 +1,10 @@
 <?php
-    $us = 'Nayeli Ramirez Hernandez';
+    $us = $_POST['vendedor'];
     require_once('conexion.php');
     $ex=mysqli_query($conexion, "SELECT * FROM products WHERE seller='$us';");
+    $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
+    $pic=mysqli_query($conexion, "SELECT img FROM users WHERE nameUser='$us';");
+    $pict=mysqli_fetch_array($pic);
     $exU=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$us'");
 
     // Verifica si la consulta fue exitosa
@@ -22,7 +25,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="barra_nav_footV.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="vc_perfil.css">
 </head>
 <body>
@@ -66,7 +69,7 @@
         <article id="bar_perfil">
             <section id="c_pic">
                 <div id="pict">
-                    <img src="imgs/<?php echo $most['picture']?>" class="imagen">
+                    <img src="imgs/<?php echo $pict['img']?>" class="imagenP">
                 </div>
                 <p id="nomUsuario"><?php echo $most['nameSeller']?></p>
             </section>

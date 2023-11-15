@@ -6,6 +6,7 @@
     $prod=mysqli_fetch_array($buscar);
     $seller= $prod['seller'];
     $cont=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$seller'");
+    $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
     $contact=mysqli_fetch_array($cont);
 ?>
 <!DOCTYPE html>
@@ -14,6 +15,7 @@
     <meta charset="UTF-8">
     <title>Producto</title>
     <link rel="stylesheet" href="p_producto.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
 <header>
@@ -100,7 +102,7 @@
                 <h1 class="namP"><?php echo $prod['nameProduct']?></h1>
                 <p id="verd">Top 5 en popularidad</p>
                 <p class="desc"><b>Horario de Estancia: <br></b> 7:00am - 2:00pm</p>
-                <p class="desc"><?php echo $prod['description']?></p>
+                <p class="desc"><?php echo $prod['descriptionP']?></p>
                 <p id="mas">¿Quieres ver mas productos de este vendedor?</p><br><br>
                 <form action="vc_perfil.php" method="post">
                 <form action="vc_perfil.php">
