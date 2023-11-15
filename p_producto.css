@@ -29,6 +29,7 @@ main{
     width: 100%;
     height: 48%;
     float: left;
+    overflow: hidden;
 }
 #container_p{
     width: 80%;
@@ -38,8 +39,9 @@ main{
 
 
 .imagen{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 #container_info{
@@ -75,10 +77,12 @@ main{
     width: 100%;
     height: 28vh;
     float: left;
+    overflow: hidden;
+    text-align: center;
 }
 .mc_picture .m_imagen{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 .m_info{
     width: 100%;
