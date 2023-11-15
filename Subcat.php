@@ -103,6 +103,7 @@
             <form action="p_producto.php" method="post" id="form1">
                 <button  class="container_p" onclick="enviarFormulario()">
                     <input type="hidden"  name="id" value="<?php echo $mostrar['id'];?>">
+                    <input type="hidden"  name="categ" value="<?php echo $mostrar['category'];?>">
                     <section> <!--Esto contiene la informacion de un producto-->
                         <div class="c_picture">
 <!--Imagen del Producto----><img src="imgs/<?php echo $mostrar['productImage']?>" class="imagen">

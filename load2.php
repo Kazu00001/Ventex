@@ -3,7 +3,7 @@ session_start();
 require('conexion.php');
 $sellerw = $_SESSION['name'];
 
-$columas = ['id', 'nameProduct', 'description', 'price', 'category', 'subcategory', 'seller', 'productImage'];
+$columas = ['id', 'nameProduct', 'descriptionP', 'price', 'category', 'subcategory', 'seller', 'productImage'];
 $table = "products";
 $campo = isset($_POST['campo']) ? $conexion->real_escape_string($_POST['campo']) : null;
 $where = '';
@@ -34,6 +34,7 @@ if ($num_rows > 0) {
         echo '<form action="p_producto.php" method="post" id="form1">';
         echo '<button  class="container_p" onclick="enviarFormulario()">';
         echo '<input type="hidden"  name="id" value="' . $row['id'] . '">';
+        echo '<input type="hidden"  name="categ" value="' . $row['category'] . '">';
         echo '<section>'; // <!--Esto contiene la informacion de un producto-->
         echo '<div class="c_picture">';
         /*<!--Imagen del Producto---->*/echo '<img src="imgs/' . $row['productImage'] . '" class="imagen">';
