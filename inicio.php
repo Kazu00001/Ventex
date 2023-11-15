@@ -80,8 +80,8 @@
                             <img src="imgs/Gomitas.jpg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$5.00</p>
+                            <p class="titS">Gomitas</p>
                         </div>
                     </section>
                     <section class="square_s">
@@ -89,35 +89,35 @@
                             <img src="imgs/bistec.jpg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$40.00</p>
+                            <p class="titS">Lonche de Bistec</p>
                         </div>
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/wifi.png" class="icons">
+                            <img src="imgs/pulpa.jpeg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$5.00</p>
+                            <p class="titS">Pulparindo</p>
                         </div>
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/mascotas-permitidas.png" class="icons">
+                            <img src="imgs/pelon.jpeg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$8.00</p>
+                            <p class="titS">Pelon Pelo Rico</p>
                         </div>
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/television.png" class="icons">
+                            <img src="imgs/mazapan.jpeg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$10.00</p>
+                            <p class="titS">Mazapan</p>
                         </div>
                     </section>
                 </section>
@@ -132,47 +132,47 @@
                 <section id="container-rooms">
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/paseo-perro.png" class="icons">
+                            <img src="imgs/pantalon1.jpg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$500.00</p>
+                            <p class="titS">Pantalon Negro</p>
                         </div>
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/competencia-de-perros.png" class="icons">
+                            <img src="imgs/rosas.jpg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$120.00</p>
+                            <p class="titS">Ramo de Rosas</p>
                         </div>
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/vino.png" class="icons">
+                            <img src="imgs/Golden.jpg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$860.00</p>
+                            <p class="titS">Album Golden</p>
                         </div>
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/mapa.png" class="icons">
+                            <img src="imgs/kinder.jpeg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">$15.00</p>
+                            <p class="titS">Kinder Delice</p>
                         </div>
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/camara.png" class="icons">
+                            <img src="imgs/pollo.jpg" class="icons">
                         </div>
                         <div class="titSer">
-                            <p class="titS">$00.00</p>
-                            <p class="titS">Nombre del Producto</p>
+                            <p class="titS">400.00</p>
+                            <p class="titS">Lonche de Pollo</p>
                         </div>
                     </section>
                 </section>

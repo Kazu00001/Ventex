@@ -200,7 +200,7 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image:url(imgs/Golden.webp) ;
+    background-image:url(imgs/Golden.jpg) ;
 }
 #dos:hover{
     transform: scale(1.1);
