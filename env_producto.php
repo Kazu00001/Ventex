@@ -9,7 +9,7 @@
     $subCategoria=$_POST['subcategoria'];
     $imagen=$_POST['image'];
     
-    $sentence="INSERT INTO products(nameProduct, description,  price, category, subCategory, seller, productImage) VALUES ('$name', '$desc','$precio', '$categoria', '$subCategoria','$vendedor', '$imagen')";
+    $sentence="INSERT INTO products(nameProduct, descriptionP,  price, category, subCategory, seller, productImage) VALUES ('$name', '$desc','$precio', '$categoria', '$subCategoria','$vendedor', '$imagen')";
     $guardar=mysqli_query($conexion, $sentence);
 
     if(!$guardar){

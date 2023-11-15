@@ -1,7 +1,7 @@
 <?php
-    $us = 'Usuario 1';
+    $us = 'Nayeli Ramirez Hernandez';
     require_once('conexion.php');
-    $ex=mysqli_query($conexion, "SELECT * FROM products;");
+    $ex=mysqli_query($conexion, "SELECT * FROM products WHERE seller='$us';");
     $exU=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$us'");
 
     // Verifica si la consulta fue exitosa
