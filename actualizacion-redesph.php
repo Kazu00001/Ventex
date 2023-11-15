@@ -25,7 +25,7 @@ $Instagram = $_POST['Instagram'];
 $Contactdescription = $_POST['Contactdescription'];
 $facebook = $_POST['facebook'];
 
-$sql = "UPDATE sellerprofile SET profileDescription = ?, Contactdescription = ?, instagram = ?, x = ?, whatsapp=?, facebook= ? WHERE idvendeor = '$idup'";
+$sql = "UPDATE sellerprofile SET profileDescription = ?, Contactdescription = ?, instagram = ?, x = ?, whatsapp=?, facebook= ? WHERE idddfi = '$idup'";
 $stmt = mysqli_prepare($Conexion, $sql);
 echo $sql; // Muestra la consulta SQL
 

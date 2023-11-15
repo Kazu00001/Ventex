@@ -75,6 +75,7 @@
 <!-------------------------------------------------------------------------------------------------------->
 <main>
     <article class="bar_perfil">
+        <br>
             <?php while ($subcat=mysqli_fetch_array($subc)) {?>
                 <form action="subsub.php" method="post" id="form1">
                 <button  class="subcate" onclick="enviarFormulario()">

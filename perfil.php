@@ -6,14 +6,13 @@ session_start();
     require_once('conexion.php');
 
     $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
-/*
+
 
 if (!isset($_SESSION['loggedin'])) {
 
-    header('Location: index.html');
+    header('Location: inicio.php');
     exit;
 }
-*/
 ?>
 
 <!DOCTYPE html>
@@ -124,8 +123,9 @@ if (!isset($_SESSION['loggedin'])) {
     if (!$Conexion) {
         die("Error en la conexión: " . mysqli_connect_error());
     }
+    $sellerw = $_SESSION['id'];
 
-    $sql = "SELECT * FROM sellerprofile WHERE nameSeller = '$idt'";
+    $sql = "SELECT * FROM sellerprofile WHERE idddfi = '$sellerw'";
     $envio = mysqli_query($Conexion, $sql);
 
     if (!$envio) {

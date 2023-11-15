@@ -47,7 +47,7 @@ if (!$envio) {
     // Redireccionar si todo está bien y cambiar nombre
     
     // Hacer la segunda sentencia de actualización (UPDATE) con sentencia preparada
-    $sql2 = "UPDATE sellerprofile SET nameSeller = ? WHERE idvendeor = $idup";
+    $sql2 = "UPDATE sellerprofile SET nameSeller = ? WHERE idddfi = $idup";
     
     
     // Verificar la conexión antes de preparar la segunda sentencia

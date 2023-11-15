@@ -22,8 +22,17 @@
     <main id="main2">
         <aside id="for2">
             <br><br>
-            <form action="Registro.php" method="post" class="form">
+            <form action="Registro.php" method="post" class="form"  enctype="multipart/form-data">
                 <h2 class="title" >Registro</h2>
+                <input type="hidden" name="value1" value="#">
+                <input type="hidden" name="value2" value="#">
+                <input type="hidden" name="value3" value="#">
+                <input type="hidden" name="value4" value="#">
+                <input type="hidden" name="value5" value="#">
+                <input type="hidden" name="value6" value="#">
+                <input type="hidden" name="value7" value="#">
+                <input type="hidden" name="value8" value="#">
+                <input type="hidden" name="value9" value="#">
                     <div class="flex">
                     <label>
                         <input class="input" type="text" name="nombre" placeholder="" required="">
@@ -46,6 +55,10 @@
                     <label>
                         <input class="input" type="password" name="pass" placeholder="" required="">
                         <span>Password</span>
+                    </label>
+                    <label >
+                        <input type="file" name="archivo" id="archivo">
+                        <span>Imagen</span>
                     </label>
                     <input type="submit" value="Registrarse"  class="submit">
                     <p class="signin">OHH Ya tienes cuenta ? <a href="Incios.html">Login in</a> </p>

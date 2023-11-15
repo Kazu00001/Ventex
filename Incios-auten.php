@@ -73,6 +73,7 @@ if ($Result->num_rows > 0) {
     }
 } else {
     // usuario incorrecto
+    
     header('Location: Incios.html');
     echo '<script>Tu usuario es incorrecto</script>';
 }
