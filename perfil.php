@@ -48,12 +48,12 @@ if (!isset($_SESSION['loggedin'])) {
                     <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="#">Categorías</a>
                         <ul class="menuv">
-                            <?php while ($cat=mysqli_fetch_array($cats)) {?>
+                            <?php //while ($cat=mysqli_fetch_array($cats)) {?>
                                 <li class="ca">
-                                    <a href="Subcat.php?category=<?php echo $cat['category'];?>" 
-                                    name=""><?php echo $cat['category'];?></a>
+                                    <a href="Subcat.php?category=<?php //echo $cat['category'];?>" 
+                                    name=""><?php //echo $cat['category'];?></a>
                                 </li>
-                                <?php } ?>
+                                <?php //} ?>
                         </ul>
                     </li>
                     <li><a href="#">Perfil</a></li>
@@ -147,7 +147,7 @@ if (!isset($_SESSION['loggedin'])) {
     mysqli_close($Conexion);
     ?>
 <br>
-<form action="actualizacion-datosa.php" class="boten">
+<form action="actualizacion-redes.php" class="boten">
                             <input type="submit" value="Editar">
                         </form>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaaaaaaaa

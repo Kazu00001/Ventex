@@ -26,32 +26,35 @@ session_start();
     <main id="main2">
         <aside id="for2">
             <br><br>
-            <form action="actualizacion-datos.php" method="post" class="form">
+            <form action="actualizacion-redesph.php" method="post" class="form">
                 <h2 class="title" >Actualizacion de datos</h2>
                     <div class="flex">
-                        <input type="hidden" name="ideup"  value="<?php echo $_SESSION['id'] ?>">
+                        <input type="hidden" name="ideup"  value="<?php echo $_SESSION['id'] ?>"><p><?php echo $_SESSION['id'] ?></p>
                 </div>  
-                <label>
-                    <input class="input" type="text" name="WhatsAppup" placeholder="" required="">
-                    <span>WhatsApp</span>
-                </label>
-                <label>
-                    <input class="input" type="text" name="correo" placeholder="" required="">
-                    <span>X</span>
-                </label>
-                <label>
-                    <input class="input" type="text" name="correo" placeholder="" required="">
-                    <span>Istagram</span>
-                </label>
                 <label>  
-                    <input class="input" type="text" name="fecha" placeholder="" required="">
+                    <input class="input" type="text" name="profileD" placeholder="" required>
                     <span>Decripcion</span>
                 </label>
                 <label>
-                    <input class="input" type="text" name="telefono" placeholder="" required="">
-                    <span>Teléfono</span>
+                    <input class="input" type="text" name="WhatsAppup" placeholder="" required>
+                    <span>WhatsApp</span>
                 </label>
-
+                <label>
+                    <input class="input" type="text" name="x" placeholder="" required>
+                    <span>X</span>
+                </label>
+                <label>
+                    <input class="input" type="text" name="Instagram" placeholder="" required>
+                    <span>Instagram</span>
+                </label>
+                <label>
+                    <input class="input" type="text" name="Contactdescription" placeholder="" required>
+                    <span>Informacion de contacto</span>
+                </label>
+                <label>
+                    <input class="input" type="text" name="facebook" placeholder="" required>
+                    <span>Facebook</span>
+                </label>
                     <input type="submit" value="Actualizar"  class="submit">
                     
             </form>
