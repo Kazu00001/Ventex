@@ -124,6 +124,14 @@ main{
     margin-top: 3vh;
     margin-left: 5vh;
 }
+#pr_productos_sub{
+    width: 94vw;
+    height: auto;
+    float: left;
+    margin-top: 5vh;
+    margin-left: 3vw;
+    margin-bottom: 3vw;
+}
 .subcate{
     font-size: 20px;
     margin: 1%;

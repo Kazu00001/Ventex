@@ -1,7 +1,8 @@
 <?php
     require_once('conexion.php');
     $id=$_POST['id'];
-    $more=mysqli_query($conexion, "SELECT * FROM products ORDER BY RAND() LIMIT 3");
+    $catP=$_POST['categ'];
+    $more=mysqli_query($conexion, "SELECT * FROM products WHERE category = '$catP' ORDER BY RAND() LIMIT 3");
     $buscar=mysqli_query($conexion, "SELECT * FROM products WHERE id = '$id'");
     $prod=mysqli_fetch_array($buscar);
     $seller= $prod['seller'];
@@ -69,6 +70,7 @@
                 <form action="p_producto.php" method="post" id="form1">
                     <button  class="m_product" onclick="enviarFormulario()">
                         <input type="hidden"  name="id" value="<?php echo $mostrar['id'];?>">
+                    <input type="hidden"  name="categ" value="<?php echo $mostrar['category'];?>">
                         <section> <!--Esto contiene la informacion de un producto-->
                             <div class="mc_picture">
     <!--Imagen del Producto----><img src="imgs/<?php echo $mostrar['productImage']?>" class="m_imagen">

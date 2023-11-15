@@ -69,7 +69,7 @@ if (!isset($_SESSION['loggedin'])) {
     
     <main>
         
-    <section class="content">
+    <article class="content">
         <div id="content2">
             <h2>Información del Usuario</h2>
             <img class="imgs" src="<?php echo'imgs/'.$_SESSION['img']?>" >
@@ -157,10 +157,9 @@ if (!isset($_SESSION['loggedin'])) {
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </section>
 
-    </section>
     <Section id="contentallp">
     <hr>
-        <br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br><br>
+       
         <h1 class="titlesp">Estos son tus Productos</h1>
         <form action="" method="post">
         <label id="campolab" for="campo">Buscar:</label>
@@ -188,6 +187,8 @@ if (!isset($_SESSION['loggedin'])) {
             }
         </script>
     </Section>
+    
+</article>
     </main>
 </body>
 
