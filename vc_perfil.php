@@ -1,5 +1,6 @@
 <?php
     $us = $_POST['vendedor'];
+    session_start();
     require_once('conexion.php');
     $ex=mysqli_query($conexion, "SELECT * FROM products WHERE seller='$us';");
     $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
@@ -41,7 +42,7 @@
                 <input type="search" id="sear">
             </section>
             <section id="perfil">
-                <div id="pic"></div>
+            <div id="pic"><img style="border-radius: 100px;" class="imgeesp" src="<?php echo'imgs/'.$_SESSION['img']?>"> </div>
             </section>
         </article>
         <section id="bnav">

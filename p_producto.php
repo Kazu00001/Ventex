@@ -1,11 +1,13 @@
 <?php
     require_once('conexion.php');
+    session_start();
     $id=$_POST['id'];
     $catP=$_POST['categ'];
     $more=mysqli_query($conexion, "SELECT * FROM products WHERE category = '$catP' ORDER BY RAND() LIMIT 3");
     $buscar=mysqli_query($conexion, "SELECT * FROM products WHERE id = '$id'");
     $prod=mysqli_fetch_array($buscar);
     $seller= $prod['seller'];
+    echo $seller;
     $cont=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$seller'");
     $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
     $contact=mysqli_fetch_array($cont);
@@ -30,7 +32,8 @@
                 <input type="search" id="sear">
             </section>
             <section id="perfil">
-                <div id="pic"></div>
+                <div id="pic"><img style="border-radius: 100px;" class="imgeesp" src="<?php echo'imgs/'.$_SESSION['img']?>"> </div>
+                </div>
             </section>
         </article>
         <section id="bnav">

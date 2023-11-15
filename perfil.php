@@ -10,7 +10,7 @@ session_start();
 
 if (!isset($_SESSION['loggedin'])) {
 
-    header('Location: inicio.php');
+    header('Location: incios.html');
     exit;
 }
 ?>
@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <input type="search" id="sear">
             </section>
             <section id="perfil">
-                <div id="pic"></div>
+                <div id="pic"><img style="border-radius: 100px;" class="imgeesp" src="<?php echo'imgs/'.$_SESSION['img']?>"> </div>
             </section>
         </article>
         <section id="bnav">
