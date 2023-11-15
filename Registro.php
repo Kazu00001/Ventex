@@ -23,7 +23,7 @@ $hash = password_hash(mysqli_real_escape_string($Conexion, $_POST['pass']), PASS
 // Verifica si el archivo es una imagen
 if (isset($_FILES["archivo"])) {
     $archivo = basename($_FILES["archivo"]["name"]);
-    $targetDirectory = "C:/wamp64/www/Ventex/";  // Ajusta la ruta al directorio correcto
+    $targetDirectory = "C:/wamp64/www/Ventex/imgs/";  // Ajusta la ruta al directorio correcto
     $targetFile = $targetDirectory . $archivo;  // Ruta completa del archivo
 
     $esImagen = getimagesize($_FILES["archivo"]["tmp_name"]);
@@ -78,7 +78,7 @@ if (!$envio) {
         exit; // Terminar la ejecución después de mostrar el mensaje de error
     } else {
         // Iniciar sesión o realizar otras acciones después de un registro exitoso
-        header('Location: Inicios.html');
+        header('Location: Incios.html');
         exit; // Terminar la ejecución después de redirigir al usuario
     }
 }
