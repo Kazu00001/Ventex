@@ -124,8 +124,9 @@ if (!isset($_SESSION['loggedin'])) {
     if (!$Conexion) {
         die("Error en la conexión: " . mysqli_connect_error());
     }
+    $sellerw = $_SESSION['id'];
 
-    $sql = "SELECT * FROM sellerprofile WHERE nameSeller = '$idt'";
+    $sql = "SELECT * FROM sellerprofile WHERE idddfi = '$sellerw'";
     $envio = mysqli_query($Conexion, $sql);
 
     if (!$envio) {

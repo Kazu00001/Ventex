@@ -55,7 +55,7 @@ if (!$envio) {
         echo 'Error de MySQL: ' . mysqli_error($Conexion);
     } else {
         echo 'Todo bien';
-        header('Location: Inicios.html');
+        header('Location: Incios.html');
     }
 }
 
