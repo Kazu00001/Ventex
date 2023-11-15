@@ -59,7 +59,7 @@ if (!isset($_SESSION['loggedin'])) {
                                 <?php //} ?>
                         </ul>
                     </li>
-                    <li><a href="#">Perfil</a></li>
+                    <li><a href="perfil.php">Perfil</a></li>
                 </ul>
             </nav>
         </section>
