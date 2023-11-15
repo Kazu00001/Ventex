@@ -77,7 +77,7 @@
                 <section id="container-rooms">
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/taza-de-cafe.png" class="icons">
+                            <img src="imgs/Gomitas.jpg" class="icons">
                         </div>
                         <div class="titSer">
                             <p class="titS">$00.00</p>
@@ -86,7 +86,7 @@
                     </section>
                     <section class="square_s">
                         <div class="c_icon">
-                            <img src="icons/cena.png" class="icons">
+                            <img src="imgs/bistec.jpg" class="icons">
                         </div>
                         <div class="titSer">
                             <p class="titS">$00.00</p>
