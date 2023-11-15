@@ -22,7 +22,7 @@
     <main id="main2">
         <aside id="for2">
             <br><br>
-            <form action="Registro.php" method="post" class="form">
+            <form action="Registro.php" method="post" class="form"  enctype="multipart/form-data">
                 <h2 class="title" >Registro</h2>
                 <input type="hidden" name="value1" value="#">
                 <input type="hidden" name="value2" value="#">
@@ -55,6 +55,9 @@
                     <label>
                         <input class="input" type="password" name="pass" placeholder="" required="">
                         <span>Password</span>
+                    </label>
+                    <label >
+                        <input type="file" name="archivo" id="archivo">
                     </label>
                     <input type="submit" value="Registrarse"  class="submit">
                     <p class="signin">OHH Ya tienes cuenta ? <a href="Incios.html">Login in</a> </p>

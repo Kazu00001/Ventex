@@ -54,8 +54,23 @@ if (!$envio) {
         echo '<SCRIPT> alert("Tu registro no se pudo registrar")</SCRIPT>';
         echo 'Error de MySQL: ' . mysqli_error($Conexion);
     } else {
-        echo 'Todo bien';
-        header('Location: Inicios.html');
+        
+            $targetDirectory = "uploads/";  // Carpeta donde deseas guardar los archivos
+            $targetFile = $targetDirectory . basename($_FILES["archivo"]["name"]);  // Ruta completa del archivo
+
+            // Verifica si el archivo es una imagen
+            $esImagen = getimagesize($_FILES["archivo"]["tmp_name"]);
+            if ($esImagen !== false) {
+                    // Mueve el archivo a la ubicación deseada
+                if (move_uploaded_file($_FILES["archivo"]["tmp_name"], $targetFile)) {
+                        echo "El archivo " . htmlspecialchars(basename($_FILES["archivo"]["name"])) . " ha sido subido correctamente.";
+                } else {
+                        echo "Hubo un error al subir el archivo.";
+                }
+            } else {
+                echo "El archivo no es una imagen válida.";
+            }
+        header('Location: Incios.html');
     }
 }
 
