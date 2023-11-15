@@ -90,7 +90,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <td><?= $_SESSION['birthdate'] ?></td>
                 </tr>
                 <tr>
-                    <td>Telefono(solo se te va mostar ati):</td>
+                    <td>Telefono(solo se te va mostar a ti):</td>
                     <td><?= $_SESSION['phone'] ?></td>
                 </tr>
                 <tr>
