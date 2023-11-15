@@ -60,7 +60,7 @@
         <main>
             <article id="paquetes"><!--Toda esta parte contendrá los diferentes tipos de habitaciones-->
                 <br>
-                <h1 class="tits">Productos recomendados</h1>
+                <h1 class="tits">Productos Recomendados</h1>
                 <section id="container-rooms">
                 <section class="habitacion"><section id="uno"></section></section>
                     <section class="habitacion"><section id="dos"></section></section>
@@ -73,7 +73,7 @@
 
             <article class="servicios"> <!--Esta parte contendrá una vista rapid de los serviios que ofrece el hotel-->
                 <br><br> 
-                <h1 class="tits">Productos Vistos Recientemente</h1>
+                <h1 class="tits">Para un Antojo</h1>
                 <section id="container-rooms">
                     <section class="square_s">
                         <div class="c_icon">
