@@ -3,6 +3,9 @@
 use LDAP\Result;
 
 session_start();
+    require_once('conexion.php');
+
+    $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
 /*
 
 if (!isset($_SESSION['loggedin'])) {
@@ -21,12 +24,13 @@ if (!isset($_SESSION['loggedin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Usuario</title>
     <link rel="stylesheet" href="styleperf.css">
+    <link rel="stylesheet" href="cuadro_producto.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="loggedin">
-    <header>
+<header>
         <article id="titfo">
             <section id="titC">
                 <br>
@@ -38,7 +42,7 @@ if (!isset($_SESSION['loggedin'])) {
             </section>
             <section id="perfil">
                 <div id="pic">
-                <img style="border-radius: 100px;" src="<?php echo'imgs/'.$_SESSION['img']?>">  
+                <img style="border-radius: 100px;" class="imgeesp" src="<?php echo'imgs/'.$_SESSION['img']?>">  
                 </div>
             </section>
         </article>
@@ -48,15 +52,19 @@ if (!isset($_SESSION['loggedin'])) {
                     <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="#">Categorías</a>
                         <ul class="menuv">
-                            <li><a href="#">Alimentos</a></li>
-                            <li><a href="#">Accesorios</a></li>
-                            <li><a href="#">Otros</a></li>
+                            <?php //while ($cat=mysqli_fetch_array($cats)) {?>
+                                <li class="ca">
+                                    <a href="Subcat.php?category=<?php //echo $cat['category'];?>" 
+                                    name=""><?php //echo $cat['category'];?></a>
+                                </li>
+                                <?php //} ?>
                         </ul>
                     </li>
-                    <li><a href="#">Perfil</a></li>
+                    <li><a href="perfil.php">Perfil</a></li>
                 </ul>
             </nav>
         </section>
+        
     </header>
     
     <main>
@@ -90,6 +98,14 @@ if (!isset($_SESSION['loggedin'])) {
                 <tr>
                     <td>
                     <a href="cerrar-sesion.php" style="color:white;"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         
+                        <form action="actualizacion-datosa.php" class="boten">
+                            <input type="submit" class="submit" value="Editar">
+                        </form>
                     </td>
                 </tr>
             </table>
@@ -135,16 +151,43 @@ if (!isset($_SESSION['loggedin'])) {
     mysqli_close($Conexion);
     ?>
 <br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaaaaaaaa
+<form action="actualizacion-redes.php" class="boten">
+                            <input type="submit" class="submit" value="Editar">
+                        </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </section>
 
-        <hr>
-        <br>
-        <h1 class="titlesp">Estos son tus Productos</h1>
-        
-        
     </section>
-    
+    <Section id="contentallp">
+    <hr>
+        <br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br><br>
+        <h1 class="titlesp">Estos son tus Productos</h1>
+        <form action="" method="post">
+        <label id="campolab" for="campo">Buscar:</label>
+        <input type="text" name="campo"  id="campo" onkeyup="getData()">
+    </form>
+        <section id="content"></section>
+        <script>
+            document.addEventListener("DOMContentLoaded", getData);
+
+            function getData() {
+                let input = document.getElementById("campo").value;
+                let content = document.getElementById("content");
+                let url = "load2.php";
+                let formData = new FormData();
+                formData.append('campo', input);
+
+                fetch(url, {
+                    method: "POST",
+                    body: formData
+                }).then(response => response.text())
+                    .then(data => {
+                        console.log(data);
+                        content.innerHTML = data;
+                    }).catch(err => console.log(err));
+            }
+        </script>
+    </Section>
     </main>
 </body>
 

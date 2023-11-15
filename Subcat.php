@@ -13,7 +13,7 @@
     } else {
         $busc = "SELECT * FROM products";
     }
-    $subc=mysqli_query($conexion, "SELECT subcategory FROM products WHERE category='$mywher';");
+    $subc=mysqli_query($conexion, "SELECT DISTINCT subcategory FROM products WHERE category='$mywher';");
     $ex = mysqli_query($conexion, $busc);
     // Verifica si la consulta fue exitosa
     if ($exU) {
@@ -34,7 +34,6 @@
     <meta charset="UTF-8">
     <title>Ventex</title>
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="categorias.css">
     <link rel="stylesheet" href="subcat.css">
 </head>
 <body>
@@ -67,7 +66,7 @@
                                 <?php } ?>
                         </ul>
                     </li>
-                    <li><a href="#">Perfil</a></li>
+                    <li><a href="perfil.php">Perfil</a></li>
                 </ul>
             </nav>
         </section>
@@ -75,18 +74,26 @@
     </header>
 <!-------------------------------------------------------------------------------------------------------->
 <main>
-    <article id="bar_perfil">
-        <ul>
+    <article class="bar_perfil">
             <?php while ($subcat=mysqli_fetch_array($subc)) {?>
-                <li class="ca">
-                    <a href="Subcat.php?category=<?php echo $subcat['subcategory'];?>" 
-                    name=""><?php echo $subcat['subcategory'];?></a>
-                </li>
+                <form action="subsub.php" method="post" id="form1">
+                <button  class="subcate" onclick="enviarFormulario()">
+                    <input type="hidden"  name="id" value="<?php echo $subcat['subcategory'];?>">
+                        <section>
+                            <p><?php echo $subcat['subcategory'];?></p>
+                        </section>
+
+                    <script>
+                        function enviarFormulario() {
+                            document.getElementById('form1').submit();
+                        }
+                    </script>
+                </button>
+            </form>
             <?php } ?>
-        </ul>
     </article>
     <section id="titulo_C">
-        <h1><?php echo $mywher ?></h1>
+        <h1 class="tituleishon"><?php echo $mywher ?></h1>
     </section>
     <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->

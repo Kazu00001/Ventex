@@ -1,9 +1,15 @@
 <?php
-    $us = 'Nayeli Ramirez Hernandez';
+    $subpro = $_POST['id'];
+    
+    $us = 'Usuario 1';
     require_once('conexion.php');
-    $ex=mysqli_query($conexion, "SELECT * FROM products WHERE seller='$us';");
+    $cats=mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
+    
+    
     $exU=mysqli_query($conexion, "SELECT * FROM sellerprofile WHERE nameSeller = '$us'");
 
+    $busc = "SELECT * FROM products WHERE subcategory = '$subpro'";
+    $ex = mysqli_query($conexion, $busc);
     // Verifica si la consulta fue exitosa
     if ($exU) {
         // Verifica si hay al menos una fila de resultados
@@ -21,9 +27,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="barra_nav_footV.css">
-    <link rel="stylesheet" href="vc_perfil.css">
+    <title>Ventex</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="categorias.css">
+    <link rel="stylesheet" href="subcat.css">
 </head>
 <body>
 <!-------------------------------------------------------------------------------------------------------->
@@ -62,27 +69,13 @@
         
     </header>
 <!-------------------------------------------------------------------------------------------------------->
-    <main>
-        <article id="bar_perfil">
-            <section id="c_pic">
-                <div id="pict">
-                    <img src="imgs/<?php echo $most['picture']?>" class="imagen">
-                </div>
-                <p id="nomUsuario"><?php echo $most['nameSeller']?></p>
-            </section>
-                <p class="description"><?php echo $most['profileDescription']?></p>
-            <section id="container_contact">
-                <p class="namP">Información de Contacto</p>
-                <div class="container_links">
-                    <a href="<?php echo $most['instagram']?>"><div class="link"></div></a>
-                </div>
-                <p class="contact_description"><?php echo $most['Contactdescription']?></p>
-            </section>
-        </article>
-        <section id="titulo_C">
-            <p id="tir">Productos del Vendedor</p>
-        </section>
-        <article id="pr_productos">
+<main>
+    <article id="bar_perfil">
+    </article>
+    <section id="titulo_C">
+        <h1 class="tituleishon"><?php echo $subpro ?></h1>
+    </section>
+    <article id="pr_productos">
 <!-------------------------------------------------------------------------------------------------------->
             <?php while($mostrar=mysqli_fetch_array($ex)) { ?>
                 
@@ -102,6 +95,7 @@
                             </div>
                         </div>
                         </section>
+
                     <script>
                         function enviarFormulario() {
                             document.getElementById('form1').submit();
