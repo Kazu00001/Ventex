@@ -6,14 +6,13 @@ session_start();
     require_once('conexion.php');
 
     $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
-/*
+
 
 if (!isset($_SESSION['loggedin'])) {
 
-    header('Location: index.html');
+    header('Location: inicio.php');
     exit;
 }
-*/
 ?>
 
 <!DOCTYPE html>
