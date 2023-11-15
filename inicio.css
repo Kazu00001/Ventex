@@ -189,7 +189,7 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(https://images.mirai.com/INFOROOMS/100376355/gMTRa4gTj2qTSjgroLJ5/gMTRa4gTj2qTSjgroLJ5_large.jpg);
+    background-image:url(imgs/noeasy.jpg) ;
 }
 #uno:hover{
     transform: scale(1.1);
@@ -200,7 +200,7 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/9e/9a/14/premium.jpg?w=700&h=-1&s=1);
+    background-image:url(imgs/Golden.webp) ;
 }
 #dos:hover{
     transform: scale(1.1);
@@ -211,7 +211,7 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(https://media.elvenezolanohouston.com/evh/wp-content/uploads/2022/06/unnamed-1-1161x750.png);
+    background-image:url(imgs/jamon.webp) ;
 }
 #tres:hover{
     transform: scale(1.1);
