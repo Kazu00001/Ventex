@@ -3,6 +3,9 @@
 use LDAP\Result;
 
 session_start();
+    require_once('conexion.php');
+
+    $cats = mysqli_query($conexion, "SELECT DISTINCT category FROM products;");
 /*
 
 if (!isset($_SESSION['loggedin'])) {
