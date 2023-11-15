@@ -12,14 +12,13 @@ main{
     height: 100%;
 }
 .bar_perfil{
-    width: 17%;
+    width: 25%;
     height: 40%;
     float: left;
-    text-align: center;
     margin-top: 15%;
-    margin-left: 1%;
+    margin-left: 2%;
     border-radius: 7px;
-    background-color: whitesmoke;
+    background-color: white;
 }
 #form1{
     margin-left: 5%;
@@ -33,6 +32,7 @@ main{
     float: left;
     border-radius: 10px;
     background-color: #929d7d;
+    transform: .3s;
 }
 .subcate:hover{
     box-shadow: 1px 1px black, 6px 6px #434F41, 3px 3px #434F41;
@@ -118,7 +118,7 @@ main{
     font-family: 'Hammersmith One', sans-serif;
 }
 #pr_productos{
-    width: 64vw;
+    width: 69vw;
     height: auto;
     float: left;
     margin-top: 3vh;
