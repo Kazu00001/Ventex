@@ -24,7 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Usuario</title>
     <link rel="stylesheet" href="styleperf.css">
-    <link rel="stylesheet" href="styleperf.css">
+    <link rel="stylesheet" href="cuadro_producto.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -163,8 +163,8 @@ if (!isset($_SESSION['loggedin'])) {
         <br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br><br>
         <h1 class="titlesp">Estos son tus Productos</h1>
         <form action="" method="post">
-        <label for="campo">Buscar:</label>
-        <input type="text" name="campo" id="campo" onkeyup="getData()">
+        <label id="campolab" for="campo">Buscar:</label>
+        <input type="text" name="campo"  id="campo" onkeyup="getData()">
     </form>
         <section id="content"></section>
         <script>
@@ -173,7 +173,7 @@ if (!isset($_SESSION['loggedin'])) {
             function getData() {
                 let input = document.getElementById("campo").value;
                 let content = document.getElementById("content");
-                let url = "load.php";
+                let url = "load2.php";
                 let formData = new FormData();
                 formData.append('campo', input);
 

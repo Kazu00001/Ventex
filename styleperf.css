@@ -269,3 +269,14 @@ main{
 .titlesp{
     text-align: center;
 }
+#campo {
+    border-radius: 100px;
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+   
+}
+#campolab{
+font-size: 250%;
+margin-left: 37%
+}
