@@ -23,7 +23,7 @@ if (!$_POST) {
 }
 
 // Obtener el ID del usuario usando el nombre de usuario
-if ($Result = $Conexion->prepare('SELECT id,/* campo contrasela*/ FROM /*Nombre de la tabla*/ WHERE correo = ?')) {
+if ($Result = $Conexion->prepare('SELECT id,pass FROM users WHERE correo = ?')) {
     // parámetros de enlace de la cadena s
     $Result->bind_param('s', $_POST['correo']);
     $Result->execute();
@@ -37,7 +37,7 @@ if ($Result = $Conexion->prepare('SELECT id,/* campo contrasela*/ FROM /*Nombre 
 // Cambiar la contraseña del usuario 
 $new_hash = password_hash($_POST['correonew'], PASSWORD_DEFAULT, ['cost' => 15]);
 //if ($Update = $Conexion->prepare('UPDATE accounts SET Pato = ? WHERE id = ?')) {
-    $Update = $Conexion->prepare('UPDATE /*Nombre de la tabla*/ SET /*Campo de la tabla de la contraseña*/ = ? WHERE id = ?');
+    $Update = $Conexion->prepare('UPDATE users SET pass = ? WHERE id = ?');
     $Update->bind_param('si', $new_hash, $id);
     $Update->execute();
     

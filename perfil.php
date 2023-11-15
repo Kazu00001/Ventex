@@ -162,6 +162,9 @@ if (!isset($_SESSION['loggedin'])) {
     <hr>
         <br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br><br>
         <h1 class="titlesp">Estos son tus Productos</h1>
+        <form action="new-productform.php" class="boten">
+                            <input type="submit" class="submit" value="Nuevo producto">
+        </form>
         <form action="" method="post">
         <label id="campolab" for="campo">Buscar:</label>
         <input type="text" name="campo"  id="campo" onkeyup="getData()">
