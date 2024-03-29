@@ -78,7 +78,9 @@
             <section id="container_contact">
                 <p class="namP">Información de Contacto</p>
                 <div class="container_links">
-                    <a href="<?php echo $most['instagram']?>"><div class="link"></div></a>
+                    <a href="<?php echo $most['instagram']?>"><div class="link">
+                    <img src="imgs/instagram.png" id="insta">
+                    </div></a>
                 </div>
                 <p class="contact_description"><?php echo $most['Contactdescription']?></p>
             </section>

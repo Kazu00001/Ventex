@@ -68,7 +68,7 @@ if ($Result->num_rows > 0) {
     } else {
 
         header('<script>Tu contraseña es incorrecta</script>');
-        header('Location: Incios.php');
+        header('Location: Incios.html');
         exit; // Asegurar que el script se detenga después de la redirección
     }
 } else {

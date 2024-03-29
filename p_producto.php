@@ -120,7 +120,9 @@
                 <br><br>
                 <p class="namP">Información de contacto</p>
                 <div class="container_links">
-                <a href="<?php echo $contact['instagram']?>"><div class="link"></div></a>
+                <a href="<?php echo $contact['instagram']?>"><div class="link">
+                    <img src="imgs/instagram.png" id="insta">
+                </div></a>
                 </div>
                 <p class="contact_description"><?php echo $contact['Contactdescription']?></p>
             </section>
